@@ -26,7 +26,7 @@ const Question2 = () => {
 
             <Text
                 style={styles.text2}>
-                {"Pensez vous manger :"}
+                {"Pensez vous manger du caca:"}
             </Text>
 
 
