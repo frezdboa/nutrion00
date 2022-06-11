@@ -8,14 +8,14 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import StyledButton3 from '../../components/StyledButton/StyleButton3';
 
 
-const Question2 = () => {
+const Question3 = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
 
 
             <Pressable
-                onPress={() => navigation.navigate('Infos 2')}
+                onPress={() => navigation.navigate('Infos 3')}
                 style={{ alignSelf: 'center', marginBottom: -20, marginVertical: 40 }}>
 
                 <FontAwesome5 name="info-circle" size={40} />
@@ -72,13 +72,13 @@ const Question2 = () => {
             <StyledButton
                 type="primary"
                 content={"recommandations"}
-                onPress="Recommandations 2">
+                onPress="Recommandations 3">
             </StyledButton>
 
             <StyledButton
                 type="secondary"
                 content={"suivant"}
-                onPress="Question 3">
+                onPress="Menu">
             </StyledButton>
 
 
@@ -91,4 +91,4 @@ const Question2 = () => {
 }
 
 
-export default Question2
+export default Question3

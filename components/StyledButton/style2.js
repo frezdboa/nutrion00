@@ -7,11 +7,10 @@ const styles2 = StyleSheet.create({
         padding: 1,
     },
     button: {
-        height: 60,
+        height: 50,
         width: '100%',
-        borderRadius: 30,
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'baseline',
         alignSelf: 'center',
         position: 'relative',
 

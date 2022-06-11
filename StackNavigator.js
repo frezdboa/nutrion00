@@ -10,9 +10,15 @@ import Consignes from './Screens2/Consignes/Consignes';
 import Question1 from './Screens2/Questions1/Question';
 import Infos1 from './Screens2/Questions1/Infos';
 import Recommendations1 from './Screens2/Questions1/Recommendations';
+
 import Question2 from './Screens2/Question2/Question';
 import Infos2 from './Screens2/Question2/Infos';
 import Recommandations2 from './Screens2/Question2/Recommendations';
+
+import Question3 from './Screens2/Question3/Question';
+import Recommandations3 from './Screens2/Question3/Recommendations';
+import Infos3 from './Screens2/Question3/Infos';
+
 
 
 
@@ -23,7 +29,7 @@ const StackNavigator = () => {
     return (
         <Stack.Navigator screenOptions={screenOptions}>
 
-            <Stack.Group>
+            <Stack.Group >
                 <Stack.Screen name="Menu" component={Home2} options={{ headerShown: false }} />
 
                 <Stack.Screen name="À propos" component={About} options={{}} />
@@ -39,6 +45,10 @@ const StackNavigator = () => {
                 <Stack.Screen name="Question 2" component={Question2} options={{}} />
                 <Stack.Screen name="Recommandations 2" component={Recommandations2} options={{ headerTitle: 'Recommandations' }} />
                 <Stack.Screen name="Infos 2" component={Infos2} options={{ headerTitle: 'Informations' }} />
+
+                <Stack.Screen name="Question 3" component={Question3} options={{}} />
+                <Stack.Screen name="Recommandations 3" component={Recommandations3} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Infos 3" component={Infos3} options={{ headerTitle: 'Informations' }} />
 
 
 
@@ -56,8 +66,6 @@ const screenOptions = {
     headerTransparent: true,
     headerTitleAlign: 'center',
     headerTitleStyle: { fontSize: 22, fontWeight: 'bold' },
-
-
 
 };
 

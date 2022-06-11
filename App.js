@@ -9,7 +9,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import StackNavigator from './StackNavigator';
 
 
-
 export default function App() {
 
   const [loaded] = useFonts({ //then reload to add the font
@@ -24,6 +23,7 @@ export default function App() {
   return (
 
     // <View style={styles.container}>
+
 
     <NavigationContainer >
       <StackNavigator />

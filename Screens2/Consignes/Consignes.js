@@ -1,12 +1,12 @@
 import { View, Text, StyleSheet, Button, Image } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { useNavigation } from '@react-navigation/native';
 import StyledButton from '../../components/StyledButton';
 import { FontAwesome5 } from '@expo/vector-icons';
 
 const Consignes = () => {
-    const navigation = useNavigation();
+
+
     return (
         <SafeAreaView style={styles.container}>
 
