@@ -19,16 +19,16 @@ const StyledButton3 = props => {
 
     return (
         <View style={styles.container}>
-            {/* <Pressable onPress={()=> {setTest((current) => current + 1 )}}
+            <Pressable onPress={() => { setTest((current) => current + 1) }}
                 style={[styles.button, { backgroundColor: backgroundColor }]}
 
             //onPress={() => navigation.navigate(onPress)}
             >
-                <Text style={[styles.text, { color: textColor }]}>{content}</Text>
-            </Pressable> */}
+                <Text style={[styles.text]}>{content}</Text>
+            </Pressable>
 
 
-            <Pressable
+            {/* <Pressable
                 onPress={() => {
                     setPressed((current) => current + number);
                     //navigation.navigate(onPress)
@@ -47,7 +47,7 @@ const StyledButton3 = props => {
                     </Text>
 
                 )}
-            </Pressable>
+            </Pressable> */}
 
 
 

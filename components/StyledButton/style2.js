@@ -9,8 +9,9 @@ const styles2 = StyleSheet.create({
     button: {
         height: 50,
         width: '100%',
+        borderRadius: 30,
         justifyContent: 'center',
-        alignItems: 'baseline',
+        alignItems: 'center',
         alignSelf: 'center',
         position: 'relative',
 
