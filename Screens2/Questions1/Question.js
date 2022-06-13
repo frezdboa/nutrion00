@@ -7,6 +7,7 @@ import styles from './styles';
 import { FontAwesome5 } from '@expo/vector-icons';
 import StyledButton3 from '../../components/StyledButton/StyleButton3';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Questions from './Question1';
 
 
 const Question1 = () => {
@@ -18,119 +19,26 @@ const Question1 = () => {
 
     return (
         <SafeAreaView style={styles.container}>
-
-
-            <Pressable
-                onPress={() => navigation.navigate('Infos 1')}
-                style={{ alignSelf: 'center', marginBottom: -20, marginVertical: 40 }}>
-
-                <FontAwesome5 name="info-circle" size={40} />
-
-
-            </Pressable>
-
-            <Text>{''}</Text>
-
-
-
-            <View>
-                {/*Question Counter*/}
-                <View style={{
-                    flexDirection: 'row',
-                    alignItems: 'flex-end',
-                }}>
-
-                    <Text style={{ fontSize: 18, marginRight: 4, fontWeight: 'bold', left: -140, opacity: 0.6 }}>{currentQuestionIndex + 1} / {12}</Text>
-                </View>
-            </View>
-
-            <Text
-                style={styles.text2}>
-                {"Pensez vous manger :"}
-            </Text>
-
-
-            <StyledButton3
-                type="primary"
-                content={"Beaucoup moins de 5 fruits et légumes par jour \n\t(je n’en consomme pas tous les jours)"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.4)"
-                number='1'
-            >
-            </StyledButton3>
-
-
-            <StyledButton3
-                type="secondary"
-                content={"Un peu moins de 5 fruits et légumes par jour"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.6)"
-                number='2'>
-            </StyledButton3>
-
-            <StyledButton3
-                type="primary"
-                content={"Environ 5 fruits et légumes par jour"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.9)"
-                number='3'>
-            </StyledButton3>
-
-
-            <StyledButton3
-                type="secondary"
-                content={"Un peu plus de 5 fruits et légumes par jour"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.9)"
-                number='4'>
-
-            </StyledButton3>
-
-
-
-            <StyledButton3
-                type="primary"
-                content={"Beaucoup plus de 5 fruits et légumes par jour"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.9)"
-                number='5'>
-            </StyledButton3>
-
-            <Text>{"\n\n"}</Text>
-
-            <StyledButton
-                type="primary"
-                content={"recommandations"}
-                onPress="Recommendations 1">
-            </StyledButton>
-
-            <StyledButton
-                type="secondary"
-                content={"suivant"}
-                onPress="Question 2">
-            </StyledButton>
-
-
-
-            <Text>{"\n\n"}</Text>
-
+            <Questions
+                Infos="Infos 1"
+                Recommandations="Recommendations 1"
+                Numéro={1}
+                Suivant="Question 2"
+                Question="Pensez vous manger :"
+                Catégorie="Fruits et Légumes"
+                r1={"Beaucoup moins de 5 fruits et légumes par jour \n\t(je n’en consomme pas tous les jours / jamais)"}
+                r2="Un peu moins de 5 fruits et légumes par jour"
+                r3="Environ 5 fruits et légumes par jour"
+                r4="Un peu plus de 5 fruits et légumes par jour"
+                r5="Beaucoup plus de 5 fruits et légumes par jour"
+            />
 
         </SafeAreaView>
 
+
     )
 
-    const renderNextButton = () => {
-        if (Test) {
-            return (
-                <TouchableOpacity>
-                    <Text style={{ fontSize: 30 }}>Next</Text>
-                </TouchableOpacity>
-            )
-        }
-        else {
-            return null
-        }
-    }
+
 }
 
 

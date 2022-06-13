@@ -8,7 +8,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import StackNavigator from './StackNavigator';
 
-
 export default function App() {
 
   const [loaded] = useFonts({ //then reload to add the font
@@ -29,17 +28,9 @@ export default function App() {
       <StackNavigator />
       <StatusBar style='auto' />
     </NavigationContainer>
+
+
   );
-
-  {/* <Header />
-
-      <Item
-        name={"Nutr"}
-        name2={"ion"}
-        tagline={"Votre partenaire santé et nutrition"}
-        image={require('./assets/images/nourriture.jpg')} />
-
-      <StatusBar style="auto" /> */}
 
   // </View>
 

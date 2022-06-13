@@ -7,21 +7,24 @@ const styles2 = StyleSheet.create({
         padding: 1,
     },
     button: {
-        height: 50,
-        width: '100%',
+        height: 70,
+        width: 350,
         justifyContent: 'center',
-        alignItems: 'baseline',
         alignSelf: 'center',
         position: 'relative',
+        borderRadius: 20,
+
 
 
     },
     text: {
-        fontSize: 12,
-        fontWeight: '500',
+        fontSize: 14,
+        fontWeight: '400',
         opacity: 1,
-        fontFamily: 'Roboto2',
         margin: 10,
+        textAlign: 'left',
+        margin: 8,
+        marginLeft: 15
     },
 });
 

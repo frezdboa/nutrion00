@@ -4,27 +4,29 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
 import StyledButton from '../../components/StyledButton';
 
-const Questionnaire = () => {
+const Page2 = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
 
-            <Text style={styles.text2}>{'Nous vous informons que vous n\'acceptez actuellement pas l\'utilisation de vos données personnelles et donc l\'enregistrement de vos réponses.\n'}</Text>
+            <Text style={styles.text2}>{'Vous pouvez continuer vers l\'auto-questionnaire alimentaire ou bien commencer par un Quiz pour tester vos connaissances.'}</Text>
 
-            <Button
-                title="Accepter l'utilisation des données personnelles" color='gray'
-                onPress={() => alert('Vous avez accepté l\'utilisation de vos données personnelles')}
-            >
-            </Button>
 
             <Text style={styles.text2}>{' '}</Text>
 
 
             <StyledButton
-                type="primary"
+                type="secondary"
                 content={"Continuer"}
-                onPress="Consignes">
+                onPress="Confidentialité">
             </StyledButton>
+
+            <StyledButton
+                type="primary"
+                content={"Testez mes connaissances \navec un Quiz !"}
+                onPress="Quiz">
+            </StyledButton>
+
         </SafeAreaView>
     )
 }
@@ -46,17 +48,20 @@ const styles = StyleSheet.create({
         marginTop: 16,
         fontWeight: 'bold',
         textDecorationLine: 'underline',
+
     },
 
     text2: {
         fontSize: 17,
         fontFamily: 'Roboto2',
         color: 'black',
-        margin: 10,
+        margin: 20,
         textAlign: 'center',
-        marginTop: 16,
+
+
+
     },
 
 });
 
-export default Questionnaire
+export default Page2

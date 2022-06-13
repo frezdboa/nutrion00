@@ -9,13 +9,11 @@ const styles = StyleSheet.create({
     button: {
         height: 60,
         borderRadius: 30,
-        width: '60%',
+        width: 250,
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
         position: 'relative',
-
-
 
 
     },
@@ -24,7 +22,8 @@ const styles = StyleSheet.create({
         fontWeight: '500',
         opacity: 1,
         textTransform: 'uppercase',
-        fontFamily: 'Roboto2'
+        fontFamily: 'Roboto2',
+        textAlign: 'center'
 
 
 

@@ -43,13 +43,13 @@ const Home2 = (props) => {
                 <StyledButton
                     type="primary"
                     content={"Questionnaire"}
-                    onPress="Confidentialité">
+                    onPress="Page2">
                 </StyledButton>
+
 
                 <StyledButton type="secondary"
                     content={"À propos"}
                     onPress="À propos">
-
                 </StyledButton>
 
             </View>

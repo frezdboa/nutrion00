@@ -7,7 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const StyledButton3 = props => {
 
-    const { type, content, onPress, backgroundColor, number } = props;
+    const { style, content, onPress, backgroundColor, number } = props;
 
     //const backgroundColor = type == 'primary' ? 'hsla(120,  80%, 50%, 0.8)' : 'hsla(120,  80%, 50%, 0.8)'
 
@@ -19,16 +19,17 @@ const StyledButton3 = props => {
 
     return (
         <View style={styles.container}>
-            {/* <Pressable onPress={()=> {setTest((current) => current + 1 )}}
+            <Pressable onPress={() => navigation.navigate(onPress)}
                 style={[styles.button, { backgroundColor: backgroundColor }]}
 
             //onPress={() => navigation.navigate(onPress)}
+            //onPress={() => { set((current) => current + 1) }}
             >
-                <Text style={[styles.text, { color: textColor }]}>{content}</Text>
-            </Pressable> */}
+                <Text style={[styles.text, { color: 'black' }]}>{content}</Text>
+            </Pressable>
 
 
-            <Pressable
+            {/* <Pressable
                 onPress={() => {
                     setPressed((current) => current + number);
                     //navigation.navigate(onPress)
@@ -47,7 +48,7 @@ const StyledButton3 = props => {
                     </Text>
 
                 )}
-            </Pressable>
+            </Pressable> */}
 
 
 

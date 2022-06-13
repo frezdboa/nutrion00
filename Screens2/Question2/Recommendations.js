@@ -16,7 +16,7 @@ const Recommandations2 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations \n pour les fruits à coque non salés :'}</Text>
+            <Text style={styles.text1}>{'Recommandations principale :'}</Text>
 
             <Text style={styles.text3}>
                 {"Une petite poignée par jour de fruits à coque non salés car ils sont riches en omega 3"}

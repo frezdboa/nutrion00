@@ -6,6 +6,7 @@ import StyledButton from '../../components/StyledButton';
 import styles from './styles';
 import { FontAwesome5 } from '@expo/vector-icons';
 import StyledButton3 from '../../components/StyledButton/StyleButton3';
+import Questions from '../Questions1/Question1';
 
 
 const Question2 = () => {
@@ -14,76 +15,20 @@ const Question2 = () => {
         <SafeAreaView style={styles.container}>
 
 
-            <Pressable
-                onPress={() => navigation.navigate('Infos 2')}
-                style={{ alignSelf: 'center', marginBottom: -20, marginVertical: 40 }}>
+            {<Questions
+                Infos="Infos 2"
+                Recommandations="Recommandations 2"
+                Numéro={2}
+                Suivant="Question 3"
+                Question="Pensez vous manger :"
+                Catégorie="Fruits à coques non salés"
+                r1="Beaucoup moins d’une petite poignée par jour de fruits à coque non salés (je n’en consomme pas toutes les semaines / jamais)"
+                r2="Un peu moins d’une petite poignée par jour de fruits à coque non salés"
+                r3="Environ une petite poignée par jour de fruits à coque non salés"
+                r4="Un peu plus d’une petite poignée par jour de fruits à coque non salés"
+                r5="Beaucoup plus d’une petite poignée par jour de fruits à coque non salés"
 
-                <FontAwesome5 name="info-circle" size={40} />
-
-                <Text></Text>
-
-            </Pressable>
-
-            <Text
-                style={styles.text2}>
-                {"Pensez vous manger :"}
-            </Text>
-
-
-            <StyledButton3
-                type="primary"
-                content={"Beaucoup moins d’une petite poignée par jour de fruits à coque non salés (je n’en consomme pas toutes les semaines/ jamais)"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.4)">
-            </StyledButton3>
-
-
-            <StyledButton3
-                type="secondary"
-                content={"Un peu moins d’une petite poignée par jour de fruits à coque non salés"}
-                backgroundColor="hsla(120,  80%, 50%, 0.6)">
-            </StyledButton3>
-
-            <StyledButton3
-                type="primary"
-                content={"Environ une petite poignée par jour de fruits à coque non salés"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.9)">
-            </StyledButton3>
-
-
-            <StyledButton3
-                type="secondary"
-                content={"Un peu plus d’une petite poignée par jour de fruits à coque non salés"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.6)">
-
-            </StyledButton3>
-
-            <StyledButton3
-                type="primary"
-                content={"Beaucoup plus d’une petite poignée par jour de fruits à coque non salés"}
-                onPress="Menu"
-                backgroundColor="hsla(120,  80%, 50%, 0.4)">
-            </StyledButton3>
-
-            <Text>{"\n\n"}</Text>
-
-            <StyledButton
-                type="primary"
-                content={"recommandations"}
-                onPress="Recommandations 2">
-            </StyledButton>
-
-            <StyledButton
-                type="secondary"
-                content={"suivant"}
-                onPress="Question 3">
-            </StyledButton>
-
-
-
-            <Text>{"\n\n"}</Text>
+            />}
 
 
         </SafeAreaView>

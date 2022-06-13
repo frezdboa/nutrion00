@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
     },
 
     buttonsContainer: {
-        position: 'absolute',
-        bottom: 70,
+        position: 'relative',
+        marginTop: 100,
         width: '100%',
 
     },

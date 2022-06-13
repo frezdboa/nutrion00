@@ -19,15 +19,15 @@ const Question3 = () => {
             {<Questions
                 Infos="Infos 3"
                 Recommandations="Recommandations 3"
-                Numéro={3}
+                Numéro={2}
                 Suivant="Question 4"
-                Question={"Pensez-vous manger \ndes légumes secs :"}
-                Catégorie="Légumes secs"
-                r1="Beaucoup moins souvent que deux fois par semaine (je n’en consomme pas toutes les semaines/ jamais)"
-                r2="Un peu moins souvent que deux fois par semaine"
-                r3="Environ deux fois par semaine"
-                r4="Un peu plus souvent que deux fois par semaine"
-                r5="Beaucoup plus souvent que deux fois par semaine"
+                Question="Pensez vous manger :"
+                Catégorie=""
+                r1=""
+                r2=""
+                r3=""
+                r4=""
+                r5=""
 
             />}
 
