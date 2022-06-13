@@ -1,5 +1,5 @@
-import { Text, Pressable, View } from 'react-native'
-import React, { useState } from 'react'
+import { Text, Pressable, View, Button } from 'react-native'
+import React, { useState, Component } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
 import StyledButton from '../../components/StyledButton';
@@ -9,8 +9,10 @@ import StyledButton3 from '../../components/StyledButton/StyleButton3';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Questions from './Question1';
 
-
+var score;
 const Question1 = () => {
+
+
     const navigation = useNavigation();
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const [showNextButton, setShowNextButton] = useState(false)

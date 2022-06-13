@@ -11,6 +11,8 @@ import Questions from '../Questions1/Question1';
 
 const Question2 = () => {
     const navigation = useNavigation();
+
+
     return (
         <SafeAreaView style={styles.container}>
 

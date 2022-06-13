@@ -1,9 +1,10 @@
-import { View, Text, Pressable } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, Pressable, Button } from 'react-native'
+import React, { useState, Component } from 'react'
 import { FontAwesome5 } from '@expo/vector-icons';
 import StyledButton3 from '../../components/StyledButton/StyleButton3';
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
+
 
 import StyledButton from '../../components/StyledButton';
 import styles from './styles';
@@ -12,9 +13,7 @@ const Questions = props => {
 
     const { Infos, Recommandations, Question, r1, r2, r3, r4, r5, Suivant, Numéro, Catégorie } = props;
 
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
     const navigation = useNavigation();
-
 
     return (
         <SafeAreaView style={styles.container2}>
@@ -117,13 +116,35 @@ const Questions = props => {
                 onPress={Suivant}>
             </StyledButton>
 
+            {/* <Button
+                title="next"
+                onPress={() => {
+                    this.props.navigation.navigate({ Suivant }, {
+                        postId: score,
+
+                    });
+                }}
+            />
+            <View>
+                <Button
+                    title="Question à 3 point"
+                    onPress={() => {
+                        score = 3
 
 
-            <Text>{"\n\n"}</Text>
+                    }}
+
+                />
+
+
+            </View> */}
+
+
+
+            <Text>{"\n\n\n"}</Text>
 
 
         </SafeAreaView>
-
 
     )
 }

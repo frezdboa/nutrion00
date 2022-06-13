@@ -80,6 +80,9 @@ const StackNavigator = () => {
 
                 <Stack.Screen name="Consignes" component={Consignes} options={{}} />
 
+
+
+
                 <Stack.Screen name="Question 1" component={Question1} options={{}} />
                 <Stack.Screen name="Recommendations 1" component={Recommendations1} options={{ headerTitle: 'Recommandations' }} />
                 <Stack.Screen name="Infos 1" component={Infos1} options={{ headerTitle: 'Informations' }} />

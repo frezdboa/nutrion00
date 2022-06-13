@@ -21,36 +21,9 @@ const StyledButton3 = props => {
         <View style={styles.container}>
             <Pressable onPress={() => navigation.navigate(onPress)}
                 style={[styles.button, { backgroundColor: backgroundColor }]}
-
-            //onPress={() => navigation.navigate(onPress)}
-            //onPress={() => { set((current) => current + 1) }}
             >
                 <Text style={[styles.text, { color: 'black' }]}>{content}</Text>
             </Pressable>
-
-
-            {/* <Pressable
-                onPress={() => {
-                    setPressed((current) => current + number);
-                    //navigation.navigate(onPress)
-                }}
-                style={({ pressed }) => [
-                    {
-                        backgroundColor: pressed
-                            ? backgroundColor
-                            : '#ffffe0',
-
-                    },
-                    styles.button
-                ]}>
-                {({ pressed }) => (
-                    <Text style={[styles.text, { color: 'black' }]}>{Pressed}
-                    </Text>
-
-                )}
-            </Pressable> */}
-
-
 
 
         </View>

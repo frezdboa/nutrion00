@@ -20,8 +20,6 @@ const Quiz = () => {
     const [score, setScore] = useState(0)
     const [maxScore, setmaxScore] = useState(0)
     const [showNextButton, setShowNextButton] = useState(false)
-    const [showRecommandationModal, setShowRecommandationModal] = useState(false)
-    const [showRecommandation, setShowRecommandation] = useState(false)
     const [showScoreModal, setShowScoreModal] = useState(false)
     const [Option1, setOption1] = useState(null);
     const [Option2, setOption2] = useState(null);
