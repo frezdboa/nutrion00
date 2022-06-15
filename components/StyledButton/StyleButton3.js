@@ -4,6 +4,7 @@ import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
 import styles from './style2';
 import { useNavigation } from '@react-navigation/native';
 
+var score1;
 
 const StyledButton3 = props => {
 
@@ -13,13 +14,14 @@ const StyledButton3 = props => {
 
 
     const navigation = useNavigation();
-    const [Pressed, setPressed] = useState('');
 
 
 
     return (
         <View style={styles.container}>
-            <Pressable onPress={() => navigation.navigate(onPress)}
+            <Pressable onPress={() => {
+                score1 = score1 + onPress
+            }}
                 style={[styles.button, { backgroundColor: backgroundColor }]}
             >
                 <Text style={[styles.text, { color: 'black' }]}>{content}</Text>

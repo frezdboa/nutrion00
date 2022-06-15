@@ -4,6 +4,8 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
 import StyledButton from '../../components/StyledButton';
 
+var next;
+
 const Questionnaire = () => {
     const navigation = useNavigation();
     return (
@@ -13,7 +15,11 @@ const Questionnaire = () => {
 
             <Button
                 title="Accepter l'utilisation des données personnelles" color='gray'
-                onPress={() => alert('Vous avez accepté l\'utilisation de vos données personnelles')}
+                onPress={() => {
+                    next = 1
+                    alert('Vous avez accepté l\'utilisation de vos données personnelles')
+                }
+                }
             >
             </Button>
 
@@ -26,7 +32,10 @@ const Questionnaire = () => {
                 onPress="Consignes">
             </StyledButton>
         </SafeAreaView>
+
+
     )
+
 }
 
 const styles = StyleSheet.create({

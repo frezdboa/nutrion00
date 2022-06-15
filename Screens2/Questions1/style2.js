@@ -1,36 +1,32 @@
 import React from 'react';
 import { FlatList, Platform, ScrollView, StatusBar, StyleSheet, Switch, Text, TouchableWithoutFeedback, View } from "react-native";
 
-const styles3 = StyleSheet.create({
+const styles2 = StyleSheet.create({
     container: {
         width: '100%',
-        padding: 5,
+        padding: 1,
     },
     button: {
-        height: 60,
-        borderRadius: 30,
-        width: 250,
+
+        height: 70,
+        width: 350,
         justifyContent: 'center',
-        alignItems: 'center',
         alignSelf: 'center',
         position: 'relative',
+        borderRadius: 20,
+
 
 
     },
     text: {
         fontSize: 14,
-        fontWeight: '500',
+        fontWeight: '400',
         opacity: 1,
-        textTransform: 'uppercase',
-        fontFamily: 'Roboto2',
-        textAlign: 'center'
-
-
-
-
-
-
+        margin: 10,
+        textAlign: 'left',
+        margin: 8,
+        marginLeft: 15
     },
 });
 
-export default styles3;
+export default styles2;

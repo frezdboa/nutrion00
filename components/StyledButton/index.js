@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import Pressable from 'react-native/Libraries/Components/Pressable/Pressable';
-import styles from './style';
+import styles3 from './style';
 import { useNavigation } from '@react-navigation/native';
 
 const StyledButton = props => {
@@ -14,13 +14,13 @@ const StyledButton = props => {
     const navigation = useNavigation();
 
     return (
-        <View style={styles.container}>
+        <View style={styles3.container}>
             <Pressable
-                style={[styles.button, { backgroundColor: backgroundColor }]}
+                style={[styles3.button, { backgroundColor: backgroundColor }]}
 
                 onPress={() => navigation.navigate(onPress)}
             >
-                <Text style={[styles.text, { color: textColor }]}>{content}</Text>
+                <Text style={[styles3.text, { color: textColor }]}>{content}</Text>
             </Pressable>
 
         </View>

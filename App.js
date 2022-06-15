@@ -10,6 +10,8 @@ import StackNavigator from './StackNavigator';
 
 export default function App() {
 
+  const [isActive, setIsActive] = useState(false);
+
   const [loaded] = useFonts({ //then reload to add the font
     Roboto2: require('./assets/fonts/Roboto-BoldItalic.ttf'),
     Dancing: require('./assets/fonts/DancingScript-VariableFont_wght.ttf'),

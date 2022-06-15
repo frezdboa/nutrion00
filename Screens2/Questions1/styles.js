@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
         color: 'black',
         margin: 10,
         left: -60,
-        marginTop: 25,
+        marginTop: 35,
         marginBottom: 10,
     },
 
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         textDecorationLine: 'underline',
         textAlign: 'center',
         position: 'relative',
-        top: 60,
+        top: 80,
         marginBottom: 10
     },
 

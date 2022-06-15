@@ -37,6 +37,7 @@ const Questions = props => {
 
 
 
+
             <View>
                 {/*Question Counter*/}
                 <View style={{
@@ -115,30 +116,6 @@ const Questions = props => {
                 content={"suivant"}
                 onPress={Suivant}>
             </StyledButton>
-
-            {/* <Button
-                title="next"
-                onPress={() => {
-                    this.props.navigation.navigate({ Suivant }, {
-                        postId: score,
-
-                    });
-                }}
-            />
-            <View>
-                <Button
-                    title="Question à 3 point"
-                    onPress={() => {
-                        score = 3
-
-
-                    }}
-
-                />
-
-
-            </View> */}
-
 
 
             <Text>{"\n\n\n"}</Text>

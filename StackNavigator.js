@@ -1,5 +1,5 @@
 import { View, Text, Pressable } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home2 from './Screens2/Home/Home2';
@@ -66,6 +66,7 @@ import Infos12 from './Screens2/Question12/Infos';
 const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
+    const [isActive, setIsActive] = useState(false);
     return (
         <Stack.Navigator screenOptions={screenOptions}>
 
