@@ -28,99 +28,12 @@ const data = [
             , 'Environ deux fois par semaine'
             , 'Un peu plus souvent que deux fois par semaine'
             , 'Beaucoup plus souvent que deux fois par semaine'],
-        correct_option: "Environ une petite poignée par jour ",
+        correct_option: 'Environ deux fois par semaine',
+        option1: 'Un peu plus souvent que deux fois par semaine',
+        option2: 'Beaucoup plus souvent que deux fois par semaine',
 
     },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
 
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
-    {
-        question: "Concernant , pensez vous qu'il faut en manger :",
-        options: ["Beaucoup moins d’une petite poignée par jour "
-            , "Un peu moins d’une petite poignée de 5 par jour"
-            , "Environ une petite poignée par jour "
-            , "Un peu plus d’une petite poignée par jour "
-            , "Beaucoup plus d’une petite poignée par jour "],
-        correct_option: "Environ une petite poignée par jour ",
-
-    },
 ]
 
 export default data

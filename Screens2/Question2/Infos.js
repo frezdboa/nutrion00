@@ -18,11 +18,6 @@ const Infos2 = () => {
                 {"2. Les fruits à coque non salés (noix, noisettes, amandes, pistaches, etc)"}
             </Text>
 
-            <StyledButton
-                type="secondary"
-                content={"revenir à la question"}
-                onPress="Question 2">
-            </StyledButton>
 
 
         </SafeAreaView>

@@ -9,6 +9,22 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
 
+    container2: {
+        flex: 1,
+        backgroundColor: '#f0fff0',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: 'relative',
+    },
+
+    container3: {
+        flex: 1,
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: 20
+    },
+
+
     text1: {
         fontSize: 20,
         fontFamily: 'Roboto2',
@@ -22,14 +38,12 @@ const styles = StyleSheet.create({
     },
 
     text2: {
-        fontSize: 19,
+        fontSize: 20,
         fontFamily: 'Roboto2',
-        textDecorationLine: 'underline',
         color: 'black',
         margin: 10,
-        textAlign: 'center',
-        marginTop: 16,
-        marginBottom: 20,
+        marginTop: 20,
+
     },
 
     text3: {
@@ -53,6 +67,17 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 5,
         marginBottom: 2,
+    },
+
+    text5: {
+        fontSize: 22,
+        fontFamily: 'Roboto2',
+        fontStyle: 'italic',
+        textDecorationLine: 'underline',
+        textAlign: 'center',
+        position: 'absolute',
+        top: 100,
+        marginBottom: 10
     },
 
 

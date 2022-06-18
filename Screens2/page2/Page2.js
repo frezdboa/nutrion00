@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, Button, Image } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
@@ -9,23 +9,37 @@ const Page2 = () => {
     return (
         <SafeAreaView style={styles.container}>
 
-            <Text style={styles.text2}>{'Vous pouvez continuer vers l\'auto-questionnaire alimentaire ou bien commencer par un Quiz pour tester vos connaissances.'}</Text>
+
+            <Text style={styles.text2}>{'En vous inscrivant d\'abord, vous aurez la possibilité de retrouver vos résultats par la suite'}</Text>
 
 
-            <Text style={styles.text2}>{' '}</Text>
+            <StyledButton type="primary"
+                content={"S'inscrire"}
+                onPress="Login">
+            </StyledButton>
 
 
             <StyledButton
                 type="secondary"
                 content={"Continuer"}
-                onPress="Confidentialité">
+                onPress="Consignes">
             </StyledButton>
 
-            <StyledButton
-                type="primary"
-                content={"Testez mes connaissances \navec un Quiz !"}
-                onPress="Quiz">
-            </StyledButton>
+
+
+            <Image
+                source={require('../../assets/images/bonne2.png')}
+                style={{
+                    zIndex: -1,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    opacity: 0.7,
+                    maxHeight: "110%",
+                    height: "110%",
+                    width: "100%"
+
+
+                }} />
 
         </SafeAreaView>
     )
@@ -34,7 +48,7 @@ const Page2 = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffffe0',
+        backgroundColor: '#f0fff0',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -52,11 +66,12 @@ const styles = StyleSheet.create({
     },
 
     text2: {
-        fontSize: 17,
-        fontFamily: 'Roboto2',
+        fontSize: 19,
+        fontWeight: '400',
         color: 'black',
         margin: 20,
         textAlign: 'center',
+        top: -30
 
 
 

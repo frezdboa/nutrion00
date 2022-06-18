@@ -16,17 +16,11 @@ const Recommandations3 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandations principales :'}</Text>
 
             <Text style={styles.text3}>
                 {"Au moins 2 fois par semaine des légumes secs car ils sont naturellement riches en fibres"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"retour"}
-                onPress="Question 3">
-            </StyledButton>
 
 
         </SafeAreaView>

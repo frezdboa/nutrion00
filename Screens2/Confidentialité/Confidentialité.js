@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Button } from 'react-native'
+import { View, Text, StyleSheet, Button, Image } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
@@ -11,26 +11,35 @@ const Questionnaire = () => {
     return (
         <SafeAreaView style={styles.container}>
 
-            <Text style={styles.text2}>{'Nous vous informons que vous n\'acceptez actuellement pas l\'utilisation de vos données personnelles et donc l\'enregistrement de vos réponses.\n'}</Text>
+            <Text style={styles.text2}>{'En vous inscrivant, vous aurez la possibilité de retrouver vos résultats par la suite\n'}</Text>
 
-            <Button
-                title="Accepter l'utilisation des données personnelles" color='gray'
-                onPress={() => {
-                    next = 1
-                    alert('Vous avez accepté l\'utilisation de vos données personnelles')
-                }
-                }
-            >
-            </Button>
 
-            <Text style={styles.text2}>{' '}</Text>
+            <StyledButton type="primary"
+                content={"S'inscrire"}
+                onPress="Login">
+            </StyledButton>
 
 
             <StyledButton
-                type="primary"
+                type="secondary"
                 content={"Continuer"}
                 onPress="Consignes">
             </StyledButton>
+
+            <Image
+                source={require('../../assets/images/bonne2.png')}
+                style={{
+                    zIndex: -1,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    opacity: 0.7,
+                    maxHeight: "110%",
+                    height: "110%",
+                    width: "100%"
+
+
+                }} />
+
         </SafeAreaView>
 
 
@@ -41,7 +50,7 @@ const Questionnaire = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffffe0',
+        backgroundColor: '#f0fff0',
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -58,12 +67,11 @@ const styles = StyleSheet.create({
     },
 
     text2: {
-        fontSize: 17,
-        fontFamily: 'Roboto2',
+        fontSize: 19,
+        fontWeight: '400',
         color: 'black',
-        margin: 10,
+        margin: 20,
         textAlign: 'center',
-        marginTop: 16,
     },
 
 });

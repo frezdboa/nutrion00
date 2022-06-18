@@ -16,18 +16,22 @@ const Recommendations1 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale :'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale :'}</Text>
 
             <Text style={styles.text3}>
                 {"Au moins 5 fruits et légumes par jour, par exemple 3 portions de légumes et 2 de fruits. Une portion c’est l’équivalent de 80 à 100 grammes, par exemple : une tomate de taille moyenne, une poignée de tomates cerises, 1 poignée de haricots verts, 1 bol de soupe, 1 pomme, 2 abricots, 4-5 fraises, 1 banane...\n Attention sont exclus des légumes : les pommes de terre, le maïs, les petits pois (= féculents)"}
             </Text>
 
-            <StyledButton
-                type="secondary"
-                content={"retour"}
-                onPress="Question 1">
-            </StyledButton>
+            <Image
+                source={require('../../assets/images/fruits.jpg')}
+                style={{
+                    zIndex: -1,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    opacity: 0.3,
 
+
+                }} />
 
         </SafeAreaView>
     )

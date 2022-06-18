@@ -13,16 +13,6 @@ const Home2 = (props) => {
     return (
         <SafeAreaView style={styles.carContainer}>
 
-            <View style={styles.container}>
-                <Image style={styles.logo}
-                    //logo :
-                    source={require('../../assets/images/Apple.jpg')}>
-
-                </Image>
-
-
-            </View>
-
             <ImageBackground
                 source={image}
                 style={styles.image}>
@@ -35,10 +25,24 @@ const Home2 = (props) => {
                 <Text style={styles.title}>{name}
                     <Text style={styles.innerText}>{name2}</Text>
                 </Text>
+
+            </View>
+
+
+            <View style={styles.container}>
+                <Image style={styles.logo}
+                    //logo :
+                    source={require('../../assets/images/logo.png')}>
+
+                </Image>
+
                 <Text style={styles.subtitle}>{tagline}</Text>
+
+
             </View>
 
             <View style={styles.buttonsContainer}>
+
 
                 <StyledButton
                     type="primary"
@@ -51,6 +55,8 @@ const Home2 = (props) => {
                     content={"À propos"}
                     onPress="À propos">
                 </StyledButton>
+
+
 
             </View>
 

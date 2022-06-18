@@ -114,7 +114,6 @@ const Quiz = () => {
         setCorrectOption(null);
         setIsOptionsDisabled(false);
         setShowNextButton(false);
-        setShowRecommandation(true);
 
         Animated.timing(progress, {
             toValue: 0,
@@ -134,7 +133,6 @@ const Quiz = () => {
             setCorrectOption(null);
             setIsOptionsDisabled(false);
             setShowNextButton(false);
-            setShowRecommandation(true);
         }
         Animated.timing(progress, {
             toValue: currentQuestionIndex + 1,
@@ -152,7 +150,6 @@ const Quiz = () => {
         setCorrectOption(null);
         setIsOptionsDisabled(false);
         setShowNextButton(false);
-        setShowRecommandation(true);
         Animated.timing(progress, {
             toValue: 0,
             duration: 1000,

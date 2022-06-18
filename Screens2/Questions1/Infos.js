@@ -18,13 +18,6 @@ const Infos1 = () => {
                 {"1. Les fruits et légumes (sous toutes leurs formes : crus ou cuits, frais, surgelés ou en conserve, en compote, en purée, en soupe, dans des plats cuisinés...)"}
             </Text>
 
-            <StyledButton
-                type="secondary"
-                content={"revenir à la question"}
-                onPress="Question 1">
-            </StyledButton>
-
-
         </SafeAreaView>
     )
 }

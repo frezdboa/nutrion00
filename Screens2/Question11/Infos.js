@@ -9,25 +9,18 @@ import StyledButton from '../../components/StyledButton';
 
 
 
-const Infos3 = () => {
+const Infos11 = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"3. Les légumes secs (lentilles, haricots secs, pois cassés, pois chiches, fèves…)"}
+                {"11. Les produits salés (charcuterie, biscuits apéritifs, snacks, plats préparés du commerce, soupes déshydratées, fromage, pain…) et le sel"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"revenir à la question"}
-                onPress="Question 3">
-            </StyledButton>
-
 
         </SafeAreaView>
     )
 }
 
 
-export default Infos3
+export default Infos11

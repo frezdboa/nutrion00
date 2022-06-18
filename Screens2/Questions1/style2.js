@@ -5,6 +5,8 @@ const styles2 = StyleSheet.create({
     container: {
         width: '100%',
         padding: 1,
+        position: 'absolute',
+
     },
     button: {
 
@@ -14,6 +16,10 @@ const styles2 = StyleSheet.create({
         alignSelf: 'center',
         position: 'relative',
         borderRadius: 20,
+        margin: 1,
+        backgroundColor: "hsla(120,  80%, 50%, 0.3)",
+
+
 
 
 

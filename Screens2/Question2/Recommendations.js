@@ -16,18 +16,11 @@ const Recommandations2 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale :'}</Text>
+            <Text style={styles.text1}>{'Recommandations principales :'}</Text>
 
             <Text style={styles.text3}>
                 {"Une petite poignée par jour de fruits à coque non salés car ils sont riches en omega 3"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"retour"}
-                onPress="Question 2">
-            </StyledButton>
-
 
         </SafeAreaView>
     )

@@ -9,29 +9,22 @@ import StyledButton from '../../components/StyledButton';
 
 
 
-const Recommandations3 = () => {
+const Recommandations10 = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
-                {"Au moins 2 fois par semaine des légumes secs car ils sont naturellement riches en fibres"}
+                {"Pas plus d’un verre par jour de boisson sucrée (et prendre plutôt un fruit pressé)\n\nAttention, un thé ou café sucrés comptent pour une boisson sucrée"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"retour"}
-                onPress="Question 3">
-            </StyledButton>
-
 
         </SafeAreaView>
     )
 }
 
 
-export default Recommandations3
+export default Recommandations10

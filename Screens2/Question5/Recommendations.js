@@ -9,7 +9,7 @@ import StyledButton from '../../components/StyledButton';
 
 
 
-const Recommandations3 = () => {
+const Recommandations5 = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
@@ -19,19 +19,12 @@ const Recommandations3 = () => {
             <Text style={styles.text1}>{'Recommandations principale:'}</Text>
 
             <Text style={styles.text3}>
-                {"Au moins 2 fois par semaine des légumes secs car ils sont naturellement riches en fibres"}
+                {"2 produits laitiers par jour pour les adultes\n\n2 produits laitiers par jour, c’est par exemple : un yaourt nature et un morceau de fromage\nPensez à compter les produits laitiers présents dans les produits cuisinés (fromage râpé etc)\n\nAttention sont exclus des produits laitiers : \n-la crème fraîche/ le beurre (= matières grasses), \n- les desserts lactés comme les crèmes desserts et flans (= produits gras et sucrés)"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"retour"}
-                onPress="Question 3">
-            </StyledButton>
-
 
         </SafeAreaView>
     )
 }
 
 
-export default Recommandations3
+export default Recommandations5

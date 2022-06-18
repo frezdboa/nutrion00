@@ -15,17 +15,20 @@ const styles = StyleSheet.create({
 
     title: {
         fontFamily: 'Roboto2',
-        fontSize: 70,
+        fontSize: 25,
         //fontWeight: 'bold',
         color: 'hsla(150, 100%, 50%, 1)',
         margin: 10,
-        textAlign: 'center',
-        marginTop: -10,
+        position: 'absolute',
+        top: -110,
+        left: 15,
+        opacity: 0.7,
+
 
     },
 
     innerText: {
-        fontSize: 70,
+        fontSize: 25,
         fontFamily: 'Roboto2',
         color: '#f0e68c',
         margin: 24,
@@ -39,7 +42,7 @@ const styles = StyleSheet.create({
         color: 'white',
         margin: 10,
         textAlign: 'center',
-        bottom: 40,
+        bottom: 10,
 
     },
 
@@ -48,7 +51,7 @@ const styles = StyleSheet.create({
         height: '105%',
         resizeMode: 'cover',
         position: 'absolute',
-        opacity: 0.7,
+        opacity: 0.6,
         backgroundColor: 'black',
 
 
@@ -62,12 +65,12 @@ const styles = StyleSheet.create({
     },
 
     logo: {
-        width: 80,
-        height: 70,
+        height: 230,
         resizeMode: 'contain',
         alignSelf: 'center',
-        top: 50,
+        top: 0,
         zIndex: 3,
+
 
     },
 

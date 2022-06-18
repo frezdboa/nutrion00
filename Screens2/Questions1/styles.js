@@ -17,6 +17,13 @@ const styles = StyleSheet.create({
         position: 'relative',
     },
 
+    container3: {
+        flex: 1,
+        alignItems: 'center',
+        position: 'absolute',
+        bottom: 20
+    },
+
 
     text1: {
         fontSize: 20,
@@ -28,6 +35,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textDecorationLine: 'underline',
         position: 'relative',
+
     },
 
     text2: {
@@ -35,13 +43,11 @@ const styles = StyleSheet.create({
         fontFamily: 'Roboto2',
         color: 'black',
         margin: 10,
-        left: -60,
-        marginTop: 35,
-        marginBottom: 10,
+
     },
 
     text3: {
-        fontSize: 15,
+        fontSize: 17,
         fontFamily: 'Roboto2',
         fontStyle: 'italic',
         color: 'black',
@@ -49,6 +55,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 5,
         marginBottom: 20,
+        backgroundColor: 'hsla(120,  80%, 100%, 0.7)',
     },
 
     text4: {
@@ -65,13 +72,13 @@ const styles = StyleSheet.create({
 
     text5: {
         fontSize: 22,
-        fontFamily: 'Roboto2',
         fontStyle: 'italic',
         textDecorationLine: 'underline',
         textAlign: 'center',
-        position: 'relative',
-        top: 80,
-        marginBottom: 10
+        position: 'absolute',
+        top: 100,
+        marginBottom: 10,
+        fontWeight: '900'
     },
 
 

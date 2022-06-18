@@ -19,10 +19,25 @@ const Consignes = () => {
 
 
             <StyledButton
-                type="primary"
+                type="secondary"
                 content={"Première question"}
                 onPress="Question 1">
             </StyledButton>
+
+            <Image
+                source={require('../../assets/images/bonne2.png')}
+                style={{
+                    zIndex: -1,
+                    position: 'absolute',
+                    alignSelf: 'center',
+                    opacity: 0.3,
+                    maxHeight: "110%",
+                    height: "110%",
+                    width: "100%"
+
+
+                }} />
+
         </SafeAreaView>
     )
 }
@@ -30,9 +45,10 @@ const Consignes = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#ffffe0',
+        backgroundColor: '#f0fff0',
         alignItems: 'center',
         justifyContent: 'center',
+
     },
 
     text1: {
@@ -41,7 +57,6 @@ const styles = StyleSheet.create({
         color: 'black',
         margin: 24,
         textAlign: 'center',
-        marginTop: 16,
         fontWeight: 'bold',
         textDecorationLine: 'underline',
     },
@@ -52,8 +67,6 @@ const styles = StyleSheet.create({
         color: 'black',
         margin: 10,
         textAlign: 'center',
-        marginTop: 16,
-        marginBottom: 20,
     },
 
 });

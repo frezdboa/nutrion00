@@ -9,20 +9,14 @@ import StyledButton from '../../components/StyledButton';
 
 
 
-const Infos3 = () => {
+const Infos4 = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"3. Les légumes secs (lentilles, haricots secs, pois cassés, pois chiches, fèves…)"}
+                {"4. Les féculents complets (pain complet, riz complet, pâtes complètes, etc)"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"revenir à la question"}
-                onPress="Question 3">
-            </StyledButton>
 
 
         </SafeAreaView>
@@ -30,4 +24,4 @@ const Infos3 = () => {
 }
 
 
-export default Infos3
+export default Infos4

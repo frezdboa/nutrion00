@@ -9,7 +9,7 @@ import StyledButton from '../../components/StyledButton';
 
 
 
-const Recommandations3 = () => {
+const Recommandations4 = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
@@ -19,19 +19,12 @@ const Recommandations3 = () => {
             <Text style={styles.text1}>{'Recommandations principale:'}</Text>
 
             <Text style={styles.text3}>
-                {"Au moins 2 fois par semaine des légumes secs car ils sont naturellement riches en fibres"}
+                {"Au moins un féculent complet par jour car ils sont naturellement riches en fibres"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"retour"}
-                onPress="Question 3">
-            </StyledButton>
-
 
         </SafeAreaView>
     )
 }
 
 
-export default Recommandations3
+export default Recommandations4
