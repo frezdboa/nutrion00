@@ -72,9 +72,18 @@ import Recommandations11b from './Screens2/Question11b/Recommendations';
 import Infos11b from './Screens2/Question11b/Infos';
 
 
-import Question12 from './Screens2/Question12/Question';
-import Recommandations12 from './Screens2/Question12/Recommendations';
-import Infos12 from './Screens2/Question12/Infos';
+import Question12a from './Screens2/Question12/Question';
+import Recommandations12a from './Screens2/Question12/Recommendations';
+import Infos12a from './Screens2/Question12/Infos';
+
+import Question12b from './Screens2/Question12b/Question';
+import Recommandations12b from './Screens2/Question12b/Recommendations';
+import Infos12b from './Screens2/Question12b/Infos';
+
+import Question12c from './Screens2/Question12c/Question';
+import Recommandations12c from './Screens2/Question12c/Recommendations';
+import Infos12c from './Screens2/Question12c/Infos';
+
 import SignUp from './Screens2/Login/Login';
 import Résultats from './Screens2/Résultats/Résultats';
 
@@ -164,9 +173,17 @@ const StackNavigator = () => {
                 <Stack.Screen name="Recommandations 11b" component={Recommandations11b} options={{ headerTitle: 'Recommandations' }} />
                 <Stack.Screen name="Infos 11b" component={Infos11b} options={{ headerTitle: 'Informations' }} />
 
-                <Stack.Screen name="Question 12" component={Question12} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 12" component={Recommandations12} options={{ headerTitle: 'Recommandations' }} />
-                <Stack.Screen name="Infos 12" component={Infos12} options={{ headerTitle: 'Informations' }} />
+                <Stack.Screen name="Question 12a" component={Question12a} options={{ headerTitleStyle: { fontSize: 14 }, headerTransparent: false, headerStyle: { backgroundColor: '#f0fff0' }, }} />
+                <Stack.Screen name="Recommandations 12a" component={Recommandations12a} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Infos 12a" component={Infos12a} options={{ headerTitle: 'Informations' }} />
+
+                <Stack.Screen name="Question 12b" component={Question12b} options={{ headerTitleStyle: { fontSize: 14 }, headerTransparent: false, headerStyle: { backgroundColor: '#f0fff0' }, }} />
+                <Stack.Screen name="Recommandations 12b" component={Recommandations12b} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Infos 12b" component={Infos12b} options={{ headerTitle: 'Informations' }} />
+
+                <Stack.Screen name="Question 12c" component={Question12c} options={{ headerTitleStyle: { fontSize: 14 }, headerTransparent: false, headerStyle: { backgroundColor: '#f0fff0' }, }} />
+                <Stack.Screen name="Recommandations 12c" component={Recommandations12c} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Infos 12c" component={Infos12c} options={{ headerTitle: 'Informations' }} />
 
 
                 <Stack.Screen name="Quiz" component={Quiz} options={{ headerTitle: 'Quiz' }} />
@@ -193,7 +210,7 @@ const screenOptions = {
     headerTransparent: true,
     headerTitleAlign: 'center',
     headerTitleStyle: { fontSize: 22, fontWeight: 'bold' },
-    headerBackImageSource: require('./assets/images/backk.png'),
+    // headerBackImageSource: require('./assets/images/backk.png'),
 
 
 };

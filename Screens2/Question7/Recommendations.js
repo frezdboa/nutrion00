@@ -16,7 +16,7 @@ const Recommandations7 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
                 {"Deux fois par semaine du poisson, dont un poisson gras (sardines, maquereau, hareng, saumon)\n\nUne portion de poisson équivaut à 100 g, un petit pavé de saumon ou une boite de sardine."}

@@ -15,7 +15,7 @@ const Infos10 = () => {
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"10. Les boissons sucrées (les jus de fruits, les boissons sucrées et les sodas, même light, les boissons dites « énergisantes », boissons chaudes sucrées)"}
+                {"10. Les boissons sucrées : les jus de fruits, les boissons sucrées et les sodas, même light, les boissons dites « énergisantes », boissons chaudes sucrées"}
             </Text>
 
         </SafeAreaView>

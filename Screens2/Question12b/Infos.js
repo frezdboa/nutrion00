@@ -9,17 +9,13 @@ import StyledButton from '../../components/StyledButton';
 
 
 
-const Recommandations6b = () => {
+const Infos12b = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
 
-
-
-            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
-
             <Text style={styles.text3}>
-                {"Privilégier la volaille, et limiter les autres viandes (porc, bœuf, veau, mouton, agneau, abats) à 500 g par semaine.\n\n500 g de viande hors volaille par semaine, cela correspond à environ 3 ou 4 steaks"}
+                {"12. Les aliments gras, sucrés, salés et ultra-transformés : céréales du petit déjeuner sucrées, gâteaux, choccolat, crèmes dessert, glaces, biscuits apéritifs, charcuterie et certains plats préparés du commerce"}
             </Text>
 
         </SafeAreaView>
@@ -27,4 +23,4 @@ const Recommandations6b = () => {
 }
 
 
-export default Recommandations6b
+export default Infos12b

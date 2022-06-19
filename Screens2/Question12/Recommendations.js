@@ -9,24 +9,18 @@ import StyledButton from '../../components/StyledButton';
 
 
 
-const Recommandations3 = () => {
+const Recommandations12a = () => {
     const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.container}>
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
-                {"Au moins 2 fois par semaine des légumes secs car ils sont naturellement riches en fibres"}
+                {"Il est recommandé de limiter les aliments gras, sucrés, salés et ultra-transformés"}
             </Text>
-
-            <StyledButton
-                type="secondary"
-                content={"retour"}
-                onPress="Question 3">
-            </StyledButton>
 
 
         </SafeAreaView>
@@ -34,4 +28,4 @@ const Recommandations3 = () => {
 }
 
 
-export default Recommandations3
+export default Recommandations12a

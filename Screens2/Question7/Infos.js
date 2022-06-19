@@ -15,7 +15,7 @@ const Infos7 = () => {
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"7. Le poisson (frais, surgelé, ou en conserve)  \n\n*Poisson gras : sardines, maquereau, hareng, saumon."}
+                {"7. Le poisson : frais, surgelé, ou en conserve  \n\n*Poisson gras : sardines, maquereau, hareng, saumon."}
             </Text>
 
         </SafeAreaView>

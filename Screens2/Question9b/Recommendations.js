@@ -16,10 +16,10 @@ const Recommandations9b = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
-                {"Privilégiez l’huile de colza, de noix et d’olive. Les matières grasses ajoutées -huile, beurre et margarine- peuvent être consommées tous les jours en petite quantités."}
+                {"Privilégiez l’huile de colza, de noix et d’olive. Les matières grasses ajoutées : huile, beurre et margarine peuvent être consommées tous les jours en petite quantités."}
             </Text>
 
         </SafeAreaView>

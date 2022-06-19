@@ -16,7 +16,7 @@ const Recommandations6 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
                 {"Privilégier la volaille, et limiter les autres viandes (porc, bœuf, veau, mouton, agneau, abats) à 500 g par semaine.\n\n500 g de viande hors volaille par semaine, cela correspond à environ 3 ou 4 steaks"}

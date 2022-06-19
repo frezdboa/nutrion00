@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
         position: 'absolute',
         top: 100,
         marginBottom: 10,
-        fontWeight: '900'
+        fontWeight: '400'
     },
 
 

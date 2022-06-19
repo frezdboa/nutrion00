@@ -15,7 +15,7 @@ const Infos8 = () => {
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"8. La charcuterie (saucisses, lardons, bacon, jambon blanc ou de volaille, viandes en conserve, jambons secs ou crus…)"}
+                {"8. La charcuterie : saucisses, lardons, bacon, jambon blanc ou de volaille, viandes en conserve, jambons secs ou crus…"}
             </Text>
 
         </SafeAreaView>

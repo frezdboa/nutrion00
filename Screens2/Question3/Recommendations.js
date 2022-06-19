@@ -16,7 +16,7 @@ const Recommandations3 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principales :'}</Text>
+            <Text style={styles.text1}>{'Recommandation principales :'}</Text>
 
             <Text style={styles.text3}>
                 {"Au moins 2 fois par semaine des légumes secs car ils sont naturellement riches en fibres"}

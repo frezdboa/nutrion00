@@ -9,7 +9,7 @@ const Infos3 = () => {
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"3. Les légumes secs (lentilles, haricots secs, pois cassés, pois chiches, fèves…)"}
+                {"3. Les légumes secs : lentilles, haricots secs, pois cassés, pois chiches, fèves…"}
             </Text>
 
 

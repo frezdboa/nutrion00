@@ -16,7 +16,7 @@ const Recommandations2 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principales :'}</Text>
+            <Text style={styles.text1}>{'Recommandation principales :'}</Text>
 
             <Text style={styles.text3}>
                 {"Une petite poignée par jour de fruits à coque non salés car ils sont riches en omega 3"}

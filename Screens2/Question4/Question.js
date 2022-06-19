@@ -11,7 +11,7 @@ import styles3 from '../../components/StyledButton/style';
 
 
 
-var score4;
+var score4 = "indéfini";
 var rep4;
 
 
@@ -19,7 +19,32 @@ class Question4 extends Component {
     constructor() {
         super()
 
+        this.state = {
+            buttonColor1: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor2: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor3: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor4: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor5: 'hsla(120,  80%, 50%, 0.3)'  // default button color goes here
+        };
+
     }
+
+    onButtonPress1 = () => {
+        this.setState({ buttonColor1: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress2 = () => {
+        this.setState({ buttonColor2: 'hsla(120,  80%, 50%, 1)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress3 = () => {
+        this.setState({ buttonColor3: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress4 = () => {
+        this.setState({ buttonColor4: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress5 = () => {
+        this.setState({ buttonColor5: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+
     render() {
 
         const { score1, rep1, score2, rep2, score3, rep3 } = this.props.route.params;
@@ -33,7 +58,7 @@ class Question4 extends Component {
 
                 <Text
                     style={styles.text5}>
-                    "Les féculents complets"
+                    Les féculents complets
                 </Text>
 
                 <Pressable
@@ -60,32 +85,35 @@ class Question4 extends Component {
                     </Text>
 
                     <Pressable onPress={() => {
+                        this.onButtonPress1()
                         score4 = 0
                         rep4 = "4.Beaucoup moins d’un féculent complet par jour/ jamais de féculent complet"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor1 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Beaucoup moins d’un féculent complet par jour/ jamais de féculent complet"}</Text>
                     </Pressable>
 
                     <Pressable onPress={() => {
+                        this.onButtonPress2()
                         score4 = 1
                         rep4 = "4.Un peu moins d’un féculent complet par jour"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor2 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Un peu moins d’un féculent complet par jour"}</Text>
                     </Pressable>
 
 
                     <Pressable onPress={() => {
+                        this.onButtonPress3()
                         score4 = 2
                         rep4 = "4.Environ un féculent complet par jour"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor3 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Environ un féculent complet par jour"}</Text>
                     </Pressable>
@@ -93,11 +121,12 @@ class Question4 extends Component {
 
 
                     <Pressable onPress={() => {
+                        this.onButtonPress4()
                         score4 = 2
                         rep4 = "4.Un peu plus d’un féculent complet par jour"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor4 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Un peu plus d’un féculent complet par jour"}</Text>
                     </Pressable>
@@ -105,11 +134,12 @@ class Question4 extends Component {
 
 
                     <Pressable onPress={() => {
+                        this.onButtonPress5()
                         score4 = 2
                         rep4 = "4.Beaucoup plus d’un féculent complet par jour"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor5 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Beaucoup plus d’un féculent complet par jour"}</Text>
                     </Pressable>

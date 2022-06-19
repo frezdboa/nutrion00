@@ -16,7 +16,7 @@ const Recommandations8 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
                 {"Limiter la charcuterie à 150g par semaine (et privilégiez le jambon blanc ou de volaille)\n\n150g de charcuterie, cela correspond à environ 3 tranches de jambon."}

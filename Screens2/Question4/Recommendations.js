@@ -16,7 +16,7 @@ const Recommandations4 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
                 {"Au moins un féculent complet par jour car ils sont naturellement riches en fibres"}

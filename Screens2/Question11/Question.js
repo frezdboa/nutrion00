@@ -11,7 +11,7 @@ import styles3 from '../../components/StyledButton/style';
 
 
 
-var score11;
+var score11 = "indéfini";
 var rep11;
 
 
@@ -19,6 +19,30 @@ class Question11 extends Component {
     constructor() {
         super()
 
+        this.state = {
+            buttonColor1: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor2: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor3: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor4: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor5: 'hsla(120,  80%, 50%, 0.3)',   // default button color goes here
+        };
+
+    }
+
+    onButtonPress1 = () => {
+        this.setState({ buttonColor1: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress2 = () => {
+        this.setState({ buttonColor2: 'hsla(120,  80%, 50%, 1)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress3 = () => {
+        this.setState({ buttonColor3: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress4 = () => {
+        this.setState({ buttonColor4: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress5 = () => {
+        this.setState({ buttonColor5: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)' });
     }
     render() {
 
@@ -33,7 +57,7 @@ class Question11 extends Component {
 
                 <Text
                     style={styles.text5}>
-                    "Les produits salés "
+                    Les produits salés
                 </Text>
 
                 <Pressable
@@ -63,43 +87,47 @@ class Question11 extends Component {
                     </Text>
 
                     <Pressable onPress={() => {
+                        this.onButtonPress1()
                         score11 = 0
                         rep11 = "11. Oui tout à fait"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor1 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Oui tout à fait"}</Text>
                     </Pressable>
 
 
                     <Pressable onPress={() => {
+                        this.onButtonPress2()
                         score11 = 0
                         rep11 = "11. Oui plutôt"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor2 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Oui plutôt"}</Text>
                     </Pressable>
 
 
                     <Pressable onPress={() => {
+                        this.onButtonPress3()
                         score11 = 1
                         rep11 = "11. Non plutôt pas"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor3 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Non plutôt pas"}</Text>
                     </Pressable>
 
 
                     <Pressable onPress={() => {
+                        this.onButtonPress4()
                         score11 = 2
                         rep11 = "11. Non pas du tout"
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor4 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Non pas du tout"}</Text>
                     </Pressable>
@@ -107,11 +135,12 @@ class Question11 extends Component {
 
 
                     <Pressable onPress={() => {
-                        score11 = ""
+                        this.onButtonPress5()
+                        score11 = "indéfini"
                         rep11 = "11. Ne s’applique pas"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor5 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Ne s’applique pas"}</Text>
                     </Pressable>

@@ -16,7 +16,7 @@ const Recommandations5 = () => {
 
 
 
-            <Text style={styles.text1}>{'Recommandations principale:'}</Text>
+            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
 
             <Text style={styles.text3}>
                 {"2 produits laitiers par jour pour les adultes\n\n2 produits laitiers par jour, c’est par exemple : un yaourt nature et un morceau de fromage\nPensez à compter les produits laitiers présents dans les produits cuisinés (fromage râpé etc)\n\nAttention sont exclus des produits laitiers : \n-la crème fraîche/ le beurre (= matières grasses), \n- les desserts lactés comme les crèmes desserts et flans (= produits gras et sucrés)"}

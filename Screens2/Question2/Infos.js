@@ -15,7 +15,7 @@ const Infos2 = () => {
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"2. Les fruits à coque non salés (noix, noisettes, amandes, pistaches, etc)"}
+                {"2. Les fruits à coque non salés : noix, noisettes, amandes, pistaches, etc"}
             </Text>
 
 

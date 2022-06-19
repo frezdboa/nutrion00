@@ -12,7 +12,7 @@ import styles3 from '../../components/StyledButton/style';
 
 
 var rep9b;
-var score9b;
+var score9b = "indéfini";
 
 
 
@@ -20,6 +20,26 @@ class Question9b extends Component {
     constructor() {
         super()
 
+        this.state = {
+            buttonColor1: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor2: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor3: 'hsla(120,  80%, 50%, 0.3)',
+            buttonColor4: 'hsla(120,  80%, 50%, 0.3)',   // default button color goes here
+        };
+
+    }
+
+    onButtonPress1 = () => {
+        this.setState({ buttonColor1: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress2 = () => {
+        this.setState({ buttonColor2: 'hsla(120,  80%, 50%, 1)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress3 = () => {
+        this.setState({ buttonColor3: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor4: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
+    }
+    onButtonPress4 = () => {
+        this.setState({ buttonColor4: 'hsla(120,  80%, 50%, 1)', buttonColor2: 'hsla(120,  80%, 50%, 0.3)', buttonColor3: 'hsla(120,  80%, 50%, 0.3)', buttonColor1: 'hsla(120,  80%, 50%, 0.3)', buttonColor5: 'hsla(120,  80%, 50%, 0.3)' });
     }
     render() {
 
@@ -66,31 +86,34 @@ class Question9b extends Component {
                     </Text>
 
                     <Pressable onPress={() => {
+                        this.onButtonPress1()
                         score9b = 2
                         rep9b = "9b. Plutôt une ou plusieurs matières grasses parmi : (huile d’olives, huile de noix/ noisette, huile de colza, huile de lin)"
 
                     }}
-                        style={[styles2.button2, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button2, { backgroundColor: this.state.buttonColor1 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Plutôt une ou plusieurs matières grasses parmi : (huile d’olives, huile de noix/ noisette, huile de colza, huile de lin)"}</Text>
                     </Pressable>
 
                     <Pressable onPress={() => {
+                        this.onButtonPress2()
                         score9b = 0
                         rep9b = "9b.Plutôt une ou plusieurs matières grasses parmi : huile de tournesol, huile d’arachide, huile de maïs, huile de coco, huile de soja, huile de pépins de raisins, huile de mélange (ISIO 4, 4 graines végétales), beurre ordinaire, beurre allégé, margarine ordinaire, margarine allégée, margarine proactive, végétaline."
 
                     }}
-                        style={[styles2.button3, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button3, { backgroundColor: this.state.buttonColor2 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Plutôt une ou plusieurs matières grasses parmi :\n-huile de tournesol           -huile d’arachide\n-huile de maïs                   -huile de coco\n-huile de soja                    -beurre ordinaire\n-beurre allégé                   -margarine ordinaire\n-margarine allégée           -margarine proactive\n-végétaline \n-huile de pépins de raisins\n-huile de mélange (ISIO 4, 4 graines végétales)"}</Text>
                     </Pressable>
 
                     <Pressable onPress={() => {
+                        this.onButtonPress3()
                         score9b = 1
                         rep9b = "9b. Plutôt les deux types de matères grasses, sans préférence"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor3 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{" Plutôt les deux types de matères grasses, sans préférence"}</Text>
                     </Pressable>
@@ -98,11 +121,12 @@ class Question9b extends Component {
 
 
                     <Pressable onPress={() => {
-                        score9b = ""
+                        this.onButtonPress4()
+                        score9b = "indéfini"
                         rep9b = "9b. Ne s’applique pas/ je ne sais pas"
 
                     }}
-                        style={[styles2.button, { backgroundColor: "hsla(120,  80%, 50%, 0.3)" }]}
+                        style={[styles2.button, { backgroundColor: this.state.buttonColor4 }]}
                     >
                         <Text style={[styles2.text, { color: 'black' }]}>{"Ne s’applique pas/ je ne sais pas"}</Text>
                     </Pressable>

@@ -15,7 +15,7 @@ const Infos4 = () => {
         <SafeAreaView style={styles.container}>
 
             <Text style={styles.text3}>
-                {"4. Les féculents complets (pain complet, riz complet, pâtes complètes, etc)"}
+                {"4. Les féculents complets : pain complet, riz complet, pâtes complètes, etc"}
             </Text>
 
 

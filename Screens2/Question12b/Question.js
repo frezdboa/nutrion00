@@ -10,12 +10,11 @@ import styles3 from '../../components/StyledButton/style';
 
 
 
+var score12a = "indéfini";
+var rep12b1, rep12b2, rep12b3, rep12b4, rep12b5;
 
-var score11b1, score11b2, score11b3, score11b4, score11b5, score11b6;
-var rep11b1, rep11b2, rep11b3, rep11b4, rep11b5, rep11b6;
 
-
-class Question11b extends Component {
+class Question12b extends Component {
     constructor() {
         super()
 
@@ -50,11 +49,6 @@ class Question11b extends Component {
             buttonColor4e: 'hsla(60,  80%, 50%, 0.2)',
             buttonColor5e: 'hsla(60,  80%, 50%, 0.15)',
 
-            buttonColor1f: 'hsla(60,  80%, 50%, 0.45)',
-            buttonColor2f: 'hsla(60,  80%, 50%, 0.4)',
-            buttonColor3f: 'hsla(60,  80%, 50%, 0.3)',
-            buttonColor4f: 'hsla(60,  80%, 50%, 0.2)',
-            buttonColor5f: 'hsla(60,  80%, 50%, 0.15)',// default button color goes here
         };
 
     }
@@ -140,26 +134,27 @@ class Question11b extends Component {
         this.setState({ buttonColor5e: 'hsla(60,  80%, 50%, 1)', buttonColor2e: 'hsla(60,  80%, 50%, 0.4)', buttonColor3e: 'hsla(60,  80%, 50%, 0.3)', buttonColor4e: 'hsla(60,  80%, 50%, 0.2)', buttonColor1e: 'hsla(60,  80%, 50%, 0.45)' });
     }
 
-    //6
-    onButtonPress1f = () => {
-        this.setState({ buttonColor1f: 'hsla(60,  80%, 50%, 1)', buttonColor2f: 'hsla(60,  80%, 50%, 0.4)', buttonColor3f: 'hsla(60,  80%, 50%, 0.3)', buttonColor4f: 'hsla(60,  80%, 50%, 0.2)', buttonColor5f: 'hsla(60,  80%, 50%, 0.15)' });
-    }
-    onButtonPress2f = () => {
-        this.setState({ buttonColor2f: 'hsla(60,  80%, 50%, 1)', buttonColor1f: 'hsla(60,  80%, 50%, 0.45)', buttonColor3f: 'hsla(60,  80%, 50%, 0.3)', buttonColor4f: 'hsla(60,  80%, 50%, 0.2)', buttonColor5f: 'hsla(60,  80%, 50%, 0.15)' });
-    }
-    onButtonPress3f = () => {
-        this.setState({ buttonColor3f: 'hsla(60,  80%, 50%, 1)', buttonColor2f: 'hsla(60,  80%, 50%, 0.4)', buttonColor1f: 'hsla(60,  80%, 50%, 0.45)', buttonColor4f: 'hsla(60,  80%, 50%, 0.2)', buttonColor5f: 'hsla(60,  80%, 50%, 0.15)' });
-    }
-    onButtonPress4f = () => {
-        this.setState({ buttonColor4f: 'hsla(60,  80%, 50%, 1)', buttonColor2f: 'hsla(60,  80%, 50%, 0.4)', buttonColor3f: 'hsla(60,  80%, 50%, 0.3)', buttonColor1f: 'hsla(60,  80%, 50%, 0.45)', buttonColor5f: 'hsla(60,  80%, 50%, 0.15)' });
-    }
-    onButtonPress5f = () => {
-        this.setState({ buttonColor5f: 'hsla(60,  80%, 50%, 1)', buttonColor2f: 'hsla(60,  80%, 50%, 0.4)', buttonColor3f: 'hsla(60,  80%, 50%, 0.3)', buttonColor4f: 'hsla(60,  80%, 50%, 0.2)', buttonColor1f: 'hsla(60,  80%, 50%, 0.45)' });
-    }
+
 
     render() {
 
-        const { score1, rep1, score2, rep2, score3, rep3, score4, rep4, score5, rep5, score6, rep6, score6b, rep6b, score7, rep7, score7b, rep7b, score8, rep8, score9, rep9, score9b, rep9b, score10, rep10, score11, rep11 } = this.props.route.params;
+        const { score1, rep1, score2, rep2, score3, rep3, score4, rep4, score5, rep5, score6, rep6, score6b, rep6b, score7, rep7, score7b, rep7b, score8, rep8, score9, rep9, score9b, rep9b,
+            score10, rep10, score11, rep11,
+            rep11b1, rep11b2, rep11b3, rep11b4, rep11b5, rep11b6, score11b,
+            rep12a1, rep12a2, rep12a3, rep12a4, rep12a5, rep12a6, rep12a7, } = this.props.route.params;
+
+
+        let Souvent12a = [rep12a1, rep12a2, rep12a3, rep12a4, rep12a5, rep12a6, rep12a7]
+
+        //calcule score de la question 12a
+        var compte = 0;
+        for (var i = 0; i < Souvent12a.length; i++) {
+            if ((Souvent12a[i] == "Souvent") || (Souvent12a[i] == "Très souvent")) { compte = compte + 1 }
+        }
+        if (compte >= 2) { score12a = 0 }
+        if (compte == 1) { score12a = 1 }
+        if (compte == 0) { score12a = 2 }
+
 
         return (
 
@@ -174,32 +169,41 @@ class Question11b extends Component {
 
                     <Text
                         style={styles.text5}>
-                        Les produits salés
+                        Les aliments gras, sucrés, salés et ultra-transformés
                     </Text>
 
+                    <Pressable
+                        onPress={() => this.props.navigation.navigate(("Infos 12b"))}
+                        style={{ alignSelf: 'center', position: 'absolute', top: 85, zIndex: 5 }}>
 
-                    <Text style={{ fontSize: 16, fontStyle: 'italic', left: -140, top: -30, position: 'relative' }}>{'11b'} / {12}</Text>
+                        <FontAwesome5 name="info-circle" size={30} />
 
 
-                    <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 30, fontSize: 40 }}>{'                               '}</Text>
+                    </Pressable>
+
+
+                    <Text style={{ fontSize: 16, fontStyle: 'italic', left: -140, top: -10, position: 'relative' }}>{'12b'} / {12}</Text>
+
+
+                    <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 80, fontSize: 40 }}>{'                               '}</Text>
 
                     <View style={styles2.container}>
 
                         <Text
                             style={styles.text2}>
-                            {"Ces aliments sont riches en sel caché. Les consommez-vous (choisir une seule réponse par aliments) :\n"}
+                            {"Qu’ils soient industriels ou artisanaux, ces produits sont salés et/ou gras. Les consommez-vous (choisir une seule réponse par ligne) :\n"}
                         </Text>
 
 
                         <Text //1
                             style={styles.text9}>
-                            {"Biscuits apéritifs / fruits à coque salés / snacks salés"}
+                            {"Hamburgers"}
                         </Text>
 
                         <Pressable onPress={() => {
                             this.onButtonPress1()
-                            score11b1 = 0
-                            rep11b1 = "Très souvent"
+
+                            rep12b1 = "Très souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor1 }]}
@@ -210,8 +214,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress2()
-                            score11b1 = 1
-                            rep11b1 = "Souvent"
+
+                            rep12b1 = "Souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor2 }]}
@@ -222,8 +226,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress3()
-                            score11b1 = 2
-                            rep11b1 = "Parfois"
+
+                            rep12b1 = "Parfois"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor3 }]}
@@ -234,8 +238,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress4()
-                            score11b1 = 3
-                            rep11b1 = "Rarement"
+
+                            rep12b1 = "Rarement"
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor4 }]}
                         >
@@ -246,8 +250,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress5()
-                            score11b1 = 4
-                            rep11b1 = "Pas du tout"
+
+                            rep12b1 = "Pas du tout"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor5 }]}
@@ -259,13 +263,13 @@ class Question11b extends Component {
 
                         <Text //2
                             style={styles.text9}>
-                            {"\nPlats préparés du commerce"}
+                            {"\nSandwiches"}
                         </Text>
 
                         <Pressable onPress={() => {
                             this.onButtonPress1b()
-                            score11b2 = 0
-                            rep11b2 = "Très souvent"
+
+                            rep12b2 = "Très souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor1b }]}
@@ -276,8 +280,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress2b()
-                            score11b2 = 1
-                            rep11b2 = "Souvent"
+
+                            rep12b2 = "Souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor2b }]}
@@ -288,8 +292,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress3b()
-                            score11b2 = 2
-                            rep11b2 = "Parfois"
+
+                            rep12b2 = "Parfois"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor3b }]}
@@ -300,8 +304,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress4b()
-                            score11b2 = 3
-                            rep11b2 = "Rarement"
+
+                            rep12b2 = "Rarement"
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor4b }]}
                         >
@@ -312,8 +316,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress5b()
-                            score11b2 = 4
-                            rep11b2 = "Pas du tout"
+
+                            rep12b2 = "Pas du tout"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor5b }]}
@@ -328,13 +332,13 @@ class Question11b extends Component {
 
                         <Text //3
                             style={styles.text9}>
-                            {"\nCharcuterie"}
+                            {"\nKebabs"}
                         </Text>
 
                         <Pressable onPress={() => {
                             this.onButtonPress1c()
-                            score11b3 = 0
-                            rep11b3 = "Très souvent"
+
+                            rep12b3 = "Très souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor1c }]}
@@ -345,8 +349,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress2c()
-                            score11b3 = 1
-                            rep11b3 = "Souvent"
+
+                            rep12b3 = "Souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor2c }]}
@@ -356,9 +360,10 @@ class Question11b extends Component {
 
 
                         <Pressable onPress={() => {
+
                             this.onButtonPress3c()
-                            score11b3 = 2
-                            rep11b3 = "Parfois"
+
+                            rep12b3 = "Parfois"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor3c }]}
@@ -369,8 +374,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress4c()
-                            score11b3 = 3
-                            rep11b3 = "Rarement"
+
+                            rep12b3 = "Rarement"
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor4c }]}
                         >
@@ -381,8 +386,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress5c()
-                            score11b3 = 4
-                            rep11b3 = "Pas du tout"
+
+                            rep12b3 = "Pas du tout"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor5c }]}
@@ -397,13 +402,13 @@ class Question11b extends Component {
 
                         <Text //4
                             style={styles.text9}>
-                            {"\nSoupes déshydratées / bouillon KUB"}
+                            {"\nPizzas"}
                         </Text>
 
                         <Pressable onPress={() => {
                             this.onButtonPress1d()
-                            score11b4 = 0
-                            rep11b4 = "Très souvent"
+
+                            rep12b4 = "Très souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor1d }]}
@@ -414,8 +419,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress2d()
-                            score11b4 = 1
-                            rep11b4 = "Souvent"
+
+                            rep12b4 = "Souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor2d }]}
@@ -426,8 +431,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress3d()
-                            score11b4 = 2
-                            rep11b4 = "Parfois"
+
+                            rep12b4 = "Parfois"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor3d }]}
@@ -438,8 +443,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress4d()
-                            score11b4 = 3
-                            rep11b4 = "Rarement"
+
+                            rep12b4 = "Rarement"
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor4d }]}
                         >
@@ -450,8 +455,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress5d()
-                            score11b4 = 4
-                            rep11b4 = "Pas du tout"
+
+                            rep12b4 = "Pas du tout"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor5d }]}
@@ -465,13 +470,13 @@ class Question11b extends Component {
 
                         <Text //5
                             style={styles.text9}>
-                            {"\nPain"}
+                            {"\nFeuilletés / friands / tartes salées"}
                         </Text>
 
                         <Pressable onPress={() => {
                             this.onButtonPress1e()
-                            score11b5 = 0
-                            rep11b5 = "Très souvent"
+
+                            rep12b5 = "Très souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor1e }]}
@@ -482,8 +487,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress2e()
-                            score11b5 = 1
-                            rep11b5 = "Souvent"
+
+                            rep12b5 = "Souvent"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor2e }]}
@@ -494,8 +499,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress3e()
-                            score11b5 = 2
-                            rep11b5 = "Parfois"
+
+                            rep12b5 = "Parfois"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor3e }]}
@@ -506,8 +511,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress4e()
-                            score11b5 = 3
-                            rep11b5 = "Rarement"
+
+                            rep12b5 = "Rarement"
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor4e }]}
                         >
@@ -518,8 +523,8 @@ class Question11b extends Component {
 
                         <Pressable onPress={() => {
                             this.onButtonPress5e()
-                            score11b5 = 4
-                            rep11b5 = "Pas du tout"
+
+                            rep12b5 = "Pas du tout"
 
                         }}
                             style={[styles2.button, { backgroundColor: this.state.buttonColor5e }]}
@@ -531,71 +536,7 @@ class Question11b extends Component {
                         <Text style={{ textDecorationLine: 'underline', position: 'relative', fontSize: 20, alignSelf: 'center', marginTop: 10 }}>{'                                                              '}</Text>
 
 
-                        <Text //6
-                            style={styles.text9}>
-                            {"\nFromage"}
-                        </Text>
 
-                        <Pressable onPress={() => {
-                            this.onButtonPress1f()
-                            score11b6 = 0
-                            rep11b6 = "Très souvent"
-
-                        }}
-                            style={[styles2.button, { backgroundColor: this.state.buttonColor1f }]}
-                        >
-                            <Text style={[styles2.text, { color: 'black' }]}>{"Très souvent"}</Text>
-                        </Pressable>
-
-
-                        <Pressable onPress={() => {
-                            this.onButtonPress2f()
-                            score11b6 = 1
-                            rep11b6 = "Souvent"
-
-                        }}
-                            style={[styles2.button, { backgroundColor: this.state.buttonColor2f }]}
-                        >
-                            <Text style={[styles2.text, { color: 'black' }]}>{"Souvent"}</Text>
-                        </Pressable>
-
-
-                        <Pressable onPress={() => {
-                            this.onButtonPress3f()
-                            score11b6 = 2
-                            rep11b6 = "Parfois"
-
-                        }}
-                            style={[styles2.button, { backgroundColor: this.state.buttonColor3f }]}
-                        >
-                            <Text style={[styles2.text, { color: 'black' }]}>{"Parfois"}</Text>
-                        </Pressable>
-
-
-                        <Pressable onPress={() => {
-                            this.onButtonPress4f()
-                            score11b6 = 3
-                            rep11b6 = "Rarement"
-                        }}
-                            style={[styles2.button, { backgroundColor: this.state.buttonColor4f }]}
-                        >
-                            <Text style={[styles2.text, { color: 'black' }]}>{"Rarement"}</Text>
-                        </Pressable>
-
-
-
-                        <Pressable onPress={() => {
-                            this.onButtonPress5f()
-                            score11b6 = 4
-                            rep11b6 = "Pas du tout"
-
-                        }}
-                            style={[styles2.button, { backgroundColor: this.state.buttonColor5f }]}
-                        >
-                            <Text style={[styles2.text, { color: 'black' }]}>{"Pas du tout"}</Text>
-                        </Pressable>
-
-                        <Text style={{ textDecorationLine: 'underline', position: 'relative', fontSize: 20, alignSelf: 'center', marginTop: 10 }}>{'                                                              '}</Text>
 
 
                     </View>
@@ -605,7 +546,7 @@ class Question11b extends Component {
                             type="primary"
                             content={"recommandations"}
                             // "Recommendations 1"
-                            onPress={"Recommandations 11"}>
+                            onPress={"Recommandations 12b"}>
                         </StyledButton>
 
 
@@ -614,7 +555,7 @@ class Question11b extends Component {
                             style={[styles3.button, { backgroundColor: 'rgba(0,0,0,0.8)' }]}
 
                             onPress={() => {
-                                this.props.navigation.navigate('Question 12a', {
+                                this.props.navigation.navigate('Question 12c', {
                                     score1,
                                     rep1,
                                     score2,
@@ -622,7 +563,9 @@ class Question11b extends Component {
                                     score3,
                                     rep3,
                                     score4, rep4, score5, rep5, score6, rep6, score6b, rep6b, score7, rep7, score7b, rep7b, score8, rep8, score9, rep9, score9b, rep9b
-                                    , score10, rep10, score11, rep11, rep11b1, rep11b2, rep11b3, rep11b4, rep11b5, rep11b6
+                                    , score10, rep10, score11, rep11, score11b, rep11b1, rep11b2, rep11b3, rep11b4, rep11b5, rep11b6, rep12a1, rep12a2, rep12a3, rep12a4, rep12a5, rep12a6, rep12a7,
+                                    rep12b1, rep12b2, rep12b3, rep12b4, rep12b5, score12a
+
 
 
                                 });
@@ -643,5 +586,9 @@ class Question11b extends Component {
 
     }
 }
-export default Question11b;
+export default Question12b;
+
+
+
+
 
