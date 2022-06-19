@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     text2: {
         fontSize: 15,
         color: 'grey',
-        marginTop: 60,
+        marginTop: 100,
         margin: 10,
         fontWeight: '500',
 

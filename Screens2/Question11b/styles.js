@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontFamily: 'Roboto2',
         color: 'black',
-        marginTop: 30,
+        marginTop: 50,
         margin: 10
 
     },

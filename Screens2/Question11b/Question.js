@@ -178,7 +178,7 @@ class Question11b extends Component {
                     </Text>
 
 
-                    <Text style={{ fontSize: 16, fontStyle: 'italic', left: -140, top: -30, position: 'relative' }}>{'11b'} / {12}</Text>
+                    <Text style={{ fontSize: 16, fontStyle: 'italic', left: -140, top: -20, position: 'relative' }}>{'11b'} / {12}</Text>
 
 
                     <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 30, fontSize: 40 }}>{'                               '}</Text>

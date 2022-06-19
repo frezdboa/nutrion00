@@ -57,7 +57,7 @@ class Question9b extends Component {
                     {"Les matières grasses ajoutées"}
                 </Text>
 
-                <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 123, fontSize: 40 }}>{'                               '}</Text>
+
 
                 <Pressable
                     onPress={() => this.props.navigation.navigate(("Infos 9"))}
@@ -67,6 +67,7 @@ class Question9b extends Component {
 
 
                 </Pressable>
+                <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 120, fontSize: 40 }}>{'                               '}</Text>
 
 
 

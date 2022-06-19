@@ -174,7 +174,7 @@ class Question12b extends Component {
 
                     <Pressable
                         onPress={() => this.props.navigation.navigate(("Infos 12b"))}
-                        style={{ alignSelf: 'center', position: 'absolute', top: 85, zIndex: 5 }}>
+                        style={{ alignSelf: 'center', position: 'absolute', top: 125, zIndex: 5 }}>
 
                         <FontAwesome5 name="info-circle" size={30} />
 
@@ -185,7 +185,7 @@ class Question12b extends Component {
                     <Text style={{ fontSize: 16, fontStyle: 'italic', left: -140, top: -10, position: 'relative' }}>{'12b'} / {12}</Text>
 
 
-                    <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 80, fontSize: 40 }}>{'                               '}</Text>
+                    <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 120, fontSize: 40 }}>{'                               '}</Text>
 
                     <View style={styles2.container}>
 

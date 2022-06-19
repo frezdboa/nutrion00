@@ -133,16 +133,16 @@ class Question12c extends Component {
 
         //question3 cocher ou non 
 
-        if (this.state.buttonColor1c == true) { rep12c31 = "" }
-        if (this.state.buttonColor2c == true) { rep12c32 = "" }
-        if (this.state.buttonColor3c == true) { rep12c33 = "" }
-        if (this.state.buttonColor4c == true) { rep12c34 = "" }
-        if (this.state.buttonColor5c == true) { rep12c35 = "" }
-        if (this.state.buttonColor6c == true) { rep12c36 = "" }
-        if (this.state.buttonColor7c == true) { rep12c37 = "" }
-        if (this.state.buttonColor8c == true) { rep12c38 = "" }
-        if (this.state.buttonColor9c == true) { rep12c39 = "" }
-        if (this.state.buttonColor10c == true) { rep12c310 = "" }
+        if (this.state.buttonColor1c == true) { rep12c31 = " " }
+        if (this.state.buttonColor2c == true) { rep12c32 = " " }
+        if (this.state.buttonColor3c == true) { rep12c33 = " " }
+        if (this.state.buttonColor4c == true) { rep12c34 = " " }
+        if (this.state.buttonColor5c == true) { rep12c35 = " " }
+        if (this.state.buttonColor6c == true) { rep12c36 = " " }
+        if (this.state.buttonColor7c == true) { rep12c37 = " " }
+        if (this.state.buttonColor8c == true) { rep12c38 = " " }
+        if (this.state.buttonColor9c == true) { rep12c39 = " " }
+        if (this.state.buttonColor10c == true) { rep12c310 = " " }
 
 
         return (
@@ -163,7 +163,7 @@ class Question12c extends Component {
 
                     <Pressable
                         onPress={() => this.props.navigation.navigate(("Infos 12c"))}
-                        style={{ alignSelf: 'center', position: 'absolute', top: 85, zIndex: 5 }}>
+                        style={{ alignSelf: 'center', position: 'absolute', top: 125, zIndex: 5 }}>
 
                         <FontAwesome5 name="info-circle" size={30} />
 
@@ -174,7 +174,7 @@ class Question12c extends Component {
                     <Text style={{ fontSize: 16, fontStyle: 'italic', left: -140, top: -10, position: 'relative' }}>{'12c'} / {12}</Text>
 
 
-                    <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 80, fontSize: 40 }}>{'                               '}</Text>
+                    <Text style={{ textDecorationLine: 'underline', position: 'absolute', top: 120, fontSize: 40 }}>{'                               '}</Text>
 
                     <View style={styles2.container}>
 
