@@ -299,17 +299,17 @@ class Résultats extends Component {
                     <Pressable style={{ backgroundColor: background12c3, fontSize: 12, color: 'black', textAlign: 'left', top: 20, width: '90%', height: 30, borderBottomLeftRadius: 30, borderBottomRightRadius: 30 }}><Text style={{ marginHorizontal: 10 }}>Score : {score12c3}/2</Text></Pressable>
 
 
+                    <Text style={styles.text2}>{"\n"}</Text>
 
 
-
-                    <Text style={styles.text2}>{"Un Quiz sur l'alimentation est aussi disponible si vous souhaitez tester vos connaissances  !"}</Text>
+                    {/* <Text style={styles.text2}>{"Un Quiz sur l'alimentation est aussi disponible si vous souhaitez tester vos connaissances  !"}</Text>
 
 
                     <StyledButton
                         type="primary"
                         content={"Faire le Quiz !"}
                         onPress="Quiz">
-                    </StyledButton>
+                    </StyledButton> */}
 
                     <StyledButton
                         type="secondary"

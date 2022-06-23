@@ -1,4 +1,4 @@
-import { View, Text, Image, ImageBackground } from 'react-native'
+import { View, Text, Image, ImageBackground, Pressable } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
@@ -41,6 +41,7 @@ const Home2 = (props) => {
 
             </View>
 
+
             <View style={styles.buttonsContainer}>
 
 
@@ -50,11 +51,12 @@ const Home2 = (props) => {
                     onPress="Page2">
                 </StyledButton>
 
-
                 <StyledButton type="secondary"
                     content={"À propos"}
                     onPress="À propos">
                 </StyledButton>
+
+
 
 
 

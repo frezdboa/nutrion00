@@ -8,6 +8,11 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import StackNavigator from './StackNavigator';
 
+import { LogBox } from 'react-native';
+LogBox.ignoreAllLogs()
+
+
+
 
 export default function App() {
 

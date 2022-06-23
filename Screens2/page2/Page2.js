@@ -1,20 +1,34 @@
-import { View, Text, StyleSheet, Button, Image } from 'react-native'
+import { View, Text, StyleSheet, Button, Image, Pressable } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
 import StyledButton from '../../components/StyledButton';
+import { FontAwesome5 } from '@expo/vector-icons';
+
 
 const Page2 = () => {
     const navigation = useNavigation();
     return (
+
+
         <SafeAreaView style={styles.container}>
+
+            <Pressable
+                onPress={() => navigation.navigate("Login")}
+                style={{ alignSelf: 'flex-end', position: 'absolute', top: 100, zIndex: 10, right: 40 }}>
+
+                <FontAwesome5 name="user" size={40} />
+
+
+
+            </Pressable>
 
 
             <Text style={styles.text2}>{'En vous inscrivant d\'abord, vous aurez la possibilité de retrouver vos résultats par la suite'}</Text>
 
 
             <StyledButton type="primary"
-                content={"S'inscrire"}
+                content={"Connexion"}
                 onPress="Login">
             </StyledButton>
 

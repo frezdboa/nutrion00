@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginTop: 5,
         marginBottom: 20,
-        backgroundColor: 'hsla(120,  80%, 100%, 0.7)',
+
     },
 
     text4: {

@@ -4,7 +4,6 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Home2 from './Screens2/Home/Home2';
 import About from './Screens2/About/About';
-import Confidentialité from './Screens2/Confidentialité/Confidentialité';
 import Consignes from './Screens2/Consignes/Consignes';
 import { FontAwesome5 } from '@expo/vector-icons';
 
@@ -86,6 +85,7 @@ import Infos12c from './Screens2/Question12c/Infos';
 
 import SignUp from './Screens2/Login/Login';
 import Résultats from './Screens2/Résultats/Résultats';
+import HomeScreen from './Screens2/Home';
 
 
 
@@ -105,92 +105,93 @@ const StackNavigator = () => {
 
                 <Stack.Screen name="Page2" component={Page2} options={{ headerTitle: '' }} />
 
-                <Stack.Screen name="Confidentialité" component={Confidentialité} options={{ headerTitle: 'Inscription' }} />
-
                 <Stack.Screen name="Consignes" component={Consignes} options={{}} />
 
 
 
 
+
                 <Stack.Screen name="Question 1" component={Question1} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommendations 1" component={Recommendations1} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommendations 1" component={Recommendations1} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 1" component={Infos1} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 2" component={Question2} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 2" component={Recommandations2} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 2" component={Recommandations2} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 2" component={Infos2} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 3" component={Question3} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 3" component={Recommandations3} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 3" component={Recommandations3} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 3" component={Infos3} options={{ headerTitle: 'Informations' }} />
 
 
                 <Stack.Screen name="Question 4" component={Question4} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 4" component={Recommandations4} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 4" component={Recommandations4} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 4" component={Infos4} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 5" component={Question5} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 5" component={Recommandations5} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 5" component={Recommandations5} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 5" component={Infos5} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 6" component={Question6} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 6" component={Recommandations6} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 6" component={Recommandations6} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 6" component={Infos6} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 6b" component={Question6b} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 6b" component={Recommandations6b} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 6b" component={Recommandations6b} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 6b" component={Infos6b} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 7" component={Question7} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 7" component={Recommandations7} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 7" component={Recommandations7} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 7" component={Infos7} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 7b" component={Question7b} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 7b" component={Recommandations7b} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 7b" component={Recommandations7b} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 7b" component={Infos7b} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 8" component={Question8} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 8" component={Recommandations8} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 8" component={Recommandations8} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 8" component={Infos8} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 9" component={Question9} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 9" component={Recommandations9} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 9" component={Recommandations9} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 9" component={Infos9} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 9b" component={Question9b} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 9b" component={Recommandations9b} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 9b" component={Recommandations9b} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 9b" component={Infos9b} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 10" component={Question10} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 10" component={Recommandations10} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 10" component={Recommandations10} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 10" component={Infos10} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 11" component={Question11} options={{ headerTitleStyle: { fontSize: 14 } }} />
-                <Stack.Screen name="Recommandations 11" component={Recommandations11} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 11" component={Recommandations11} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 11" component={Infos11} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 11b" component={Question11b} options={{ headerTitleStyle: { fontSize: 14 }, headerTransparent: false, headerStyle: { backgroundColor: '#f0fff0' }, }} />
-                <Stack.Screen name="Recommandations 11b" component={Recommandations11b} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 11b" component={Recommandations11b} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 11b" component={Infos11b} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 12a" component={Question12a} options={{ headerTitleStyle: { fontSize: 14 }, headerTransparent: false, headerStyle: { backgroundColor: '#f0fff0' }, }} />
-                <Stack.Screen name="Recommandations 12a" component={Recommandations12a} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 12a" component={Recommandations12a} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 12a" component={Infos12a} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 12b" component={Question12b} options={{ headerTitleStyle: { fontSize: 14 }, headerTransparent: false, headerStyle: { backgroundColor: '#f0fff0' }, }} />
-                <Stack.Screen name="Recommandations 12b" component={Recommandations12b} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 12b" component={Recommandations12b} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 12b" component={Infos12b} options={{ headerTitle: 'Informations' }} />
 
                 <Stack.Screen name="Question 12c" component={Question12c} options={{ headerTitleStyle: { fontSize: 14 }, headerTransparent: false, headerStyle: { backgroundColor: '#f0fff0' }, }} />
-                <Stack.Screen name="Recommandations 12c" component={Recommandations12c} options={{ headerTitle: 'Recommandations' }} />
+                <Stack.Screen name="Recommandations 12c" component={Recommandations12c} options={{ headerTitle: 'Recommandation' }} />
                 <Stack.Screen name="Infos 12c" component={Infos12c} options={{ headerTitle: 'Informations' }} />
 
 
                 <Stack.Screen name="Quiz" component={Quiz} options={{ headerTitle: 'Quiz' }} />
 
-                <Stack.Screen name="Login" component={SignUp} options={{ headerTitle: 'Infos' }} />
+                <Stack.Screen name="Login" component={SignUp} options={{ headerTitle: 'Connexion' }} />
 
                 <Stack.Screen name="Résultats" component={Résultats} options={{ headerShown: false }} />
+
+                <Stack.Screen name="Home" component={HomeScreen} options={{ headerTitle: '' }} />
 
 
 

@@ -85,7 +85,7 @@ class Question7b extends Component {
 
                     <Text
                         style={styles.text2}>
-                        {"Pensez-vous manger du poisson (sardines, maquereau, hareng, saumon) :"}
+                        {"Pensez-vous manger du poisson gras (sardines, maquereau, hareng, saumon) :"}
                     </Text>
                     <Pressable onPress={() => {
                         this.onButtonPress1()

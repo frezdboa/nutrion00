@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
+import { View, Text, StyleSheet, Image, Pressable, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
@@ -12,18 +12,57 @@ import StyledButton from '../../components/StyledButton';
 const Recommandations3 = () => {
     const navigation = useNavigation();
     return (
-        <SafeAreaView style={styles.container}>
+        <ScrollView
+            style={{ flex: 1 }}
+            contentContainerStyle={styles.scrollview}
+            scrollEnabled={true}
+        >
+            <SafeAreaView style={{ backgroundColor: 'white' }}>
+
+                <Image
+                    source={require('../../assets/images/cap31.jpg')}
+                    style={{
+                        top: 100,
+                        width: '100%',
+
+                        opacity: 1,
+                        resizeMode: 'contain',
+                        marginVertical: -100,
 
 
 
-            <Text style={styles.text1}>{'Recommandation principales :'}</Text>
+                    }} />
 
-            <Text style={styles.text3}>
-                {"Au moins 2 fois par semaine des légumes secs car ils sont naturellement riches en fibres"}
-            </Text>
+                <Image
+                    source={require('../../assets/images/cap32.jpg')}
+                    style={{
+                        width: '100%',
+
+                        opacity: 1,
+                        resizeMode: 'contain',
+                        marginVertical: -120,
 
 
-        </SafeAreaView>
+
+
+                    }} />
+
+                <Image
+                    source={require('../../assets/images/cap33.jpg')}
+                    style={{
+                        width: '100%',
+
+                        opacity: 1,
+                        resizeMode: 'contain',
+                        marginTop: -90,
+
+
+
+
+                    }} />
+            </SafeAreaView>
+
+        </ScrollView>
     )
 }
 

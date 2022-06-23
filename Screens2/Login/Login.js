@@ -1,192 +1,189 @@
-import { useNavigation } from "@react-navigation/native";
-import { Button, StyleSheet, Text, TextInput, View, Image } from 'react-native';
-import layouts from "./Layouts";
-import { TouchableOpacity } from "react-native-gesture-handler";
-import React, { Component } from "react";
+import { useNavigation } from '@react-navigation/core'
+import React, { useEffect, useState } from 'react'
+import { StyleSheet, Text, TextInput, TouchableOpacity, TouchableOpacityBase, View } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { auth } from '../firebase.js'
 
+const SignUp = () => {
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
-//const navigation = useNavigation();
+    const navigation = useNavigation()
 
-export default class SignUp extends Component {
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            if (user) {
+                navigation.replace("Home")
+            }
+        })
 
-    constructor(props) {
-        super(props);
-        this.state = { accord_stat_age: '', pseudo: '', password: '' };
+        return unsubscribe
+    }, [])
+
+    const handleSignUp = () => {
+        auth
+            .createUserWithEmailAndPassword(email, password)
+            .then(userCredentials => {
+                const user = userCredentials.user;
+                console.log('Registered with:', user.email);
+            })
+            .catch(error => alert(error.message))
     }
 
-    InsertRecord = () => {
-        var accord_stat_age = this.state.accord_stat_age;
-        var pseudo = this.state.pseudo;
-        var password = this.state.password;
-
-        if (accord_stat_age.length == 0 || pseudo.length == 0 || password.length == 0) {
-
-            alert('Un ou plusieurs champs sont manquant');
-        }
-        else {
-            var InsertAPIURL = "http://10.0.2.2:80/api/insert.php";
-
-            var headers = {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            };
-
-            var Data = {
-                accord_stat_age: accord_stat_age,
-                pseudo: pseudo,
-                password: password
-            };
-
-            fetch(InsertAPIURL,
-                {
-                    method: 'POST',
-                    headers: headers,
-                    body: JSON.stringify(Data)
-                }
-            )
-                .then((response) => response.json())
-                .then((response) => {
-                    alert(response[0].Message);
-                }
-                )
-                .catch((error) => {
-                    alert("Erreur" + error);
-                }
-                )
-        }
-
+    const handleLogin = () => {
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then(userCredentials => {
+                const user = userCredentials.user;
+                console.log('Logged in with:', user.email);
+            })
+            .catch(error => alert(error.message))
     }
 
-    render() {
-        return (
-            <View style={style.root}>
-                <View>
+    const [showNextButton, setShowNextButton] = useState(false)
 
-                    <Text style={style.text}>Âge</Text>
+    const renderNextButton = () => {
+        if (showNextButton) {
+            return (
+                <View style={styles.buttonContainer}>
 
-                    <View style={style.input_container}>
-                        <TextInput
-                            placeholder="accord_stat_age"
-                            keyboardType='numeric'
-                            onChangeText={accord_stat_age => this.setState({ accord_stat_age })}
 
-                        />
-                    </View>
-
-                    <Text style={style.text}>Nom d'utilisateur</Text>
-
-                    <View style={style.input_container}>
-                        <TextInput
-                            placeholder="pseudo"
-                            onChangeText={pseudo => this.setState({ pseudo })}
-                        />
-                    </View>
-
-                    <Text style={style.text}>Mot de passe</Text>
-
-                    <View style={style.input_container}>
-                        <TextInput
-                            placeholder="password" secureTextEntry={true}
-                            onChangeText={password => this.setState({ password })}
-                        />
-                    </View>
+                    <TouchableOpacity
+                        onPress={handleSignUp}
+                        style={[styles.button, styles.buttonOutline]}
+                    >
+                        <Text style={styles.buttonOutlineText}>S'enregistrer</Text>
+                    </TouchableOpacity>
 
                 </View>
+            )
+        } else {
+            return null
+        }
+    }
 
-                <Text>{'\n'}</Text>
-
-                <Button
-                    title="Accepter l'utilisation des données personnelles" color='gray'
-                    onPress={() => {
-
-                        alert('Vous avez accepté l\'utilisation de vos données personnelles')
-                    }
-                    }
-                >
-                </Button>
-                <Text></Text>
-                <Button
-                    title="Inscription"
-                    style={style.button}
-                    onPress={this.InsertRecord}>
-
-
-
-                </Button>
-
-                <Image
-                    source={require('../../quiz/assets/images/fruits.png')}
-                    style={{
-                        width: 500,
-                        height: 300,
-                        zIndex: -1,
-                        position: 'absolute',
-                        bottom: 0,
-                        alignSelf: 'center',
-                        opacity: 0.1,
-
-
-                    }}
-                    resizeMode={'contain'}
+    return (
+        <SafeAreaView>
+            <View style={styles.inputContainer}>
+                <TextInput
+                    placeholder="Email"
+                    value={email}
+                    onChangeText={text => setEmail(text)}
+                    style={styles.input}
                 />
-                <Image
-                    source={require('../../quiz/assets/images/légumes.png')}
-                    style={{
-                        width: 500,
-                        height: 350,
-                        zIndex: -1,
-                        position: 'absolute',
-                        bottom: 330,
-                        alignSelf: 'center',
-                        opacity: 0.1,
-
-                    }}
-                    resizeMode={'contain'}
+                <TextInput
+                    placeholder="Password"
+                    value={password}
+                    onChangeText={text => setPassword(text)}
+                    style={styles.input}
+                    secureTextEntry
                 />
 
 
+                <View style={styles.buttonContainer2}>
+
+                    <Text style={styles.Text}>{"Pour vous enregistrer vous devez accepter l'utilisation de vos données. \nAinsi en répondant au questionnaire, vous aurez le choix de nous transmettre vos réponses dans un but de recherche médical et statistique"}</Text>
+
+
+                    <TouchableOpacity
+                        onPress={() => { alert('Vous avez accepté l\'utilisation de vos données'), setShowNextButton(true) }}
+                        style={[styles.button2]}
+                    >
+                        <Text style={styles.buttonText}>Accepter l'utilisation des données</Text>
+
+                    </TouchableOpacity>
+
+                    <TouchableOpacity
+                        onPress={handleLogin}
+                        style={styles.button}
+                    >
+                        <Text style={styles.buttonText}>Se connecter</Text>
+                    </TouchableOpacity>
+
+                    {renderNextButton()}
+                </View>
             </View>
-        );
-    };
-};
+        </SafeAreaView>
+    )
+}
 
-const style = StyleSheet.create({
-    root: {
+export default SignUp
+
+const styles = StyleSheet.create({
+    container: {
         flex: 1,
         justifyContent: 'center',
-        paddingHorizontal: layouts.paddingHorizontal,
-        paddingVertical: layouts.paddingVertical,
-        backgroundColor: layouts.bgColor
+        alignItems: 'center',
+        position: 'absolute',
 
     },
+    inputContainer: {
+        top: 30,
+        alignSelf: 'center',
 
-    input_container: {
-        borderWidth: 1,
-        borderColor: 'blue',
-        borderRadius: 10,
-        marginTop: 15,
-        marginBottom: 10,
+    },
+    input: {
+        backgroundColor: 'white',
         paddingHorizontal: 15,
         paddingVertical: 10,
-        backgroundColor: '#fff'
-
+        borderRadius: 10,
+        top: 45,
+        marginVertical: 5,
     },
+    buttonContainer: {
 
-    input: {
-        padding: 10
-
+        justifyContent: 'center',
+        width: '80%',
+        alignSelf: 'center',
+        marginTop: 10,
     },
-    text: {
-        fontSize: 16,
-        fontWeight: 'bold'
+    buttonContainer2: {
+
+        justifyContent: 'center',
+        width: '80%',
+        alignSelf: 'center',
+        marginTop: 60,
     },
     button: {
-        backgroundColor: 'layouts.secondary',
+        backgroundColor: '#0782F9',
+        width: 200,
         padding: 15,
-        borderRadius: 20,
+        borderRadius: 10,
+        alignSelf: 'center',
+        alignItems: 'center'
     },
-    button_text: {
+    button2: {
+        backgroundColor: 'grey',
+        width: '170%',
+        padding: 15,
+        borderRadius: 10,
+        alignSelf: 'center',
+        marginVertical: 10,
+        alignItems: 'center'
+
+    },
+    buttonOutline: {
+        backgroundColor: 'white',
+        marginTop: 5,
+        borderColor: '#0782F9',
+        borderWidth: 2,
+    },
+    buttonText: {
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 16,
+    },
+    buttonOutlineText: {
+        color: '#0782F9',
+        fontWeight: '700',
+        fontSize: 16,
+    },
+    Text: {
+        fontWeight: '500',
+        fontSize: 14,
         textAlign: 'center',
-        color: '#fff'
-    }
+        marginHorizontal: 10,
+
+
+    },
 })

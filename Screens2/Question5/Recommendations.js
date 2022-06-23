@@ -1,28 +1,72 @@
-import { View, Text, StyleSheet, Image, Pressable } from 'react-native'
+import { View, Text, StyleSheet, Image, Pressable, ScrollView } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 import StyledButton from '../../components/StyledButton';
-
-
+import ReactNativeZoomableView from '@dudigital/react-native-zoomable-view/src/ReactNativeZoomableView';
 
 
 const Recommandations5 = () => {
     const navigation = useNavigation();
     return (
-        <SafeAreaView style={styles.container}>
+        <ScrollView
+            style={{ flex: 1 }}
+            contentContainerStyle={styles.scrollview}
+            scrollEnabled={true}
+        >
+
+
+            <SafeAreaView style={{ backgroundColor: 'white' }}>
+
+
+                <Image
+                    source={require('../../assets/images/cap51.jpg')}
+                    style={{
+                        top: 90,
+                        width: '100%',
+
+                        opacity: 1,
+                        resizeMode: 'contain',
+                        marginVertical: -20,
 
 
 
-            <Text style={styles.text1}>{'Recommandation principale:'}</Text>
+                    }} />
 
-            <Text style={styles.text3}>
-                {"2 produits laitiers par jour pour les adultes\n\n2 produits laitiers par jour, c’est par exemple : un yaourt nature et un morceau de fromage\nPensez à compter les produits laitiers présents dans les produits cuisinés (fromage râpé etc)\n\nAttention sont exclus des produits laitiers : \n-la crème fraîche/ le beurre (= matières grasses), \n- les desserts lactés comme les crèmes desserts et flans (= produits gras et sucrés)"}
-            </Text>
+                <Image
+                    source={require('../../assets/images/cap52.jpg')}
+                    style={{
+                        width: '100%',
 
-        </SafeAreaView>
+                        opacity: 1,
+                        resizeMode: 'contain',
+                        marginVertical: -20,
+
+
+
+
+                    }} />
+
+                <Image
+                    source={require('../../assets/images/cap53.jpg')}
+                    style={{
+                        width: '100%',
+
+                        opacity: 1,
+                        resizeMode: 'contain',
+                        marginTop: -100,
+
+
+
+
+                    }} />
+            </SafeAreaView>
+
+
+
+        </ScrollView>
     )
 }
 
